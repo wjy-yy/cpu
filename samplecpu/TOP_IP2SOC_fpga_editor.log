@@ -1,0 +1,84 @@
+#:C19    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   NT M2.1 P.20131013
+#Current Working Directory:
+#:D   E:\whu\cpu\cpu621
+#Date/Time:
+#:T   Tue Jun 21 17:26:12 2022
+#------------------------------
+	#Reading TOP_IP2SOC.ncd...
+	#Loading device for application Rf_Device from file '7k160t.nph' in environment E:\Xilinx\14.7\ISE_DS\ISE\.
+	#   "TOP_IP2SOC" is an NCD, version 3.2, device xc7k160t, package fbg676, speed -2l
+	#Design creation date: 2022.06.21.09.21.19
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+select site 'DSP48_X2Y65'
+	#site "DSP48_X2Y65",  type = DSP48E1  (RPM grid X121Y325)
+	#4
+unselect -all
+	#5
+select comp 'U1/DataPath/U2/register_31<891>'
+	#comp "U1/DataPath/U2/register_31<891>",  site "SLICE_X75Y57",  type = SLICEL  (RPM grid X207Y114)
+	#6
+unselect -all
+	#7
+select site 'TIEOFF_X48Y61'
+	#site "TIEOFF_X48Y61",  type = TIEOFF  (RPM grid X180Y122)
+	#8
+unselect -all
+	#9
+select rpm 'Shape_4'
+	#RPM Shape_4, type CARRY
+	#10
+unselect -all
+	#11
+select site 'TIEOFF_X41Y44'
+	#site "TIEOFF_X41Y44",  type = TIEOFF  (RPM grid X156Y88)
+	#12
+unselect -all
+	#13
+select comp 'Addr_out<18>'
+	#comp "Addr_out<18>",  site "SLICE_X63Y48",  type = SLICEL  (RPM grid X175Y96)
+	#14
+unselect -all
+	#15
+select comp 'U6/M2/buffer<26>'
+	#comp "U6/M2/buffer<26>",  site "SLICE_X52Y61",  type = SLICEL  (RPM grid X145Y122)
+	#16
+unselect -all
+	#17
+select comp 'U6/M2/buffer<63>'
+	#comp "U6/M2/buffer<63>",  site "SLICE_X51Y61",  type = SLICEL  (RPM grid X143Y122)
+	#18
+unselect -all
+	#19
+select site 'RAMB18_X2Y24'
+	#site "RAMB18_X2Y24",  type = FIFO18E1  (RPM grid X134Y120)
+	#20
+unselect -all
+	#21
+select site 'DSP48_X2Y26'
+	#site "DSP48_X2Y26",  type = DSP48E1  (RPM grid X121Y130)
+	#22
+unselect -all
+	#23
+select comp 'U10/counter0<23>'
+	#comp "U10/counter0<23>",  site "SLICE_X47Y67",  type = SLICEL  (RPM grid X131Y134)
+	#24
+unselect -all
+	#25
+select site 'TIEOFF_X37Y74'
+	#site "TIEOFF_X37Y74",  type = TIEOFF  (RPM grid X140Y148)
+	#26
+unselect -all
+	#27
+unselect -all
+	#28
+select site 'RAMB36_X5Y27'
+	#site "RAMB36_X5Y27",  type = RAMBFIFO36E1  (RPM grid X237Y270)

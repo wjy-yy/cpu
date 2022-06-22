@@ -1,0 +1,74 @@
+D:/WHU/lab/im.v {1 {vlog -work work -vopt -stats=none D:/WHU/lab/im.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module im
+
+Top level modules:
+	im
+
+} {} {}} D:/WHU/lab/alu.v {1 {vlog -work work -vopt -stats=none D:/WHU/lab/alu.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module alu
+
+Top level modules:
+	alu
+
+} {} {}} D:/WHU/lab/SCPU.v {1 {vlog -work work -vopt -stats=none D:/WHU/lab/SCPU.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module SCPU
+
+Top level modules:
+	SCPU
+
+} {} {}} D:/WHU/lab/PC.v {1 {vlog -work work -vopt -stats=none D:/WHU/lab/PC.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} D:/WHU/lab/ctrl_encode_def.v {1 {vlog -work work -vopt -stats=none {D:\WHU\lab\ctrl_encode_def.v}
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+
+} {} {}} D:/WHU/lab/RF.v {1 {vlog -work work -vopt -stats=none D:/WHU/lab/RF.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module RF
+
+Top level modules:
+	RF
+
+} {} {}} D:/WHU/lab/dm.v {1 {vlog -work work -vopt -stats=none D:/WHU/lab/dm.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module dm
+
+Top level modules:
+	dm
+
+} {} {}} D:/WHU/lab/NPC.v {1 {vlog -work work -vopt -stats=none {D:\WHU\lab\NPC.v}
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module NPC
+
+Top level modules:
+	NPC
+
+} {} {}} D:/WHU/lab/EXT.v {1 {vlog -work work -vopt -stats=none D:/WHU/lab/EXT.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module EXT
+
+Top level modules:
+	EXT
+
+} {} {}} D:/WHU/lab/ctrl.v {1 {vlog -work work -vopt -stats=none D:/WHU/lab/ctrl.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module ctrl
+
+Top level modules:
+	ctrl
+
+} {} {}} D:/WHU/lab/sccomp.v {1 {vlog -work work -vopt -stats=none D:/WHU/lab/sccomp.v
+Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+-- Compiling module sccomp
+
+Top level modules:
+	sccomp
+
+} {} {}}

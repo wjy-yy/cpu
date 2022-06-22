@@ -1,0 +1,6 @@
+jalr x1, x0, 4
+addi x2, x0, 1
+jal x1, 8
+addi x2, x2, 1
+bne x2, x0, 4
+lui x3, 0x44

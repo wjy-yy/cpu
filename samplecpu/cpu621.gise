@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<generated_project xmlns="http://www.xilinx.com/XMLSchema" xmlns:xil_pn="http://www.xilinx.com/XMLSchema">
+
+  <!--                                                          -->
+
+  <!--             For tool use only. Do not edit.              -->
+
+  <!--                                                          -->
+
+  <!-- ProjectNavigator created generated project file.         -->
+
+  <!-- For use in tracking generated file and other information -->
+
+  <!-- allowing preservation of process status.                 -->
+
+  <!--                                                          -->
+
+  <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved. -->
+
+  <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
+
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="cpu621.xise"/>
+
+  <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="TOP_IP2SOC.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="TOP_IP2SOC.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="TOP_IP2SOC.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="TOP_IP2SOC.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="TOP_IP2SOC.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="TOP_IP2SOC.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="TOP_IP2SOC.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="TOP_IP2SOC.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="TOP_IP2SOC.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="TOP_IP2SOC.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="TOP_IP2SOC.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="TOP_IP2SOC.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="TOP_IP2SOC.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="TOP_IP2SOC.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="TOP_IP2SOC.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="TOP_IP2SOC.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="TOP_IP2SOC.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="TOP_IP2SOC.ut" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="TOP_IP2SOC.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="TOP_IP2SOC.xst"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="TOP_IP2SOC_envsettings.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="TOP_IP2SOC_fpga_editor.log"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="TOP_IP2SOC_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="TOP_IP2SOC_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="TOP_IP2SOC_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="TOP_IP2SOC_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="TOP_IP2SOC_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TOP_IP2SOC_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TOP_IP2SOC_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="TOP_IP2SOC_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="TOP_IP2SOC_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TOP_IP2SOC_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="TOP_IP2SOC_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="TOP_IP2SOC_summary.xml"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="TOP_IP2SOC_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="TOP_IP2SOC_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_REPORT" xil_pn:name="top_ip2soc.bgn" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BIT" xil_pn:name="top_ip2soc.bit" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_BITGEN_DRC" xil_pn:name="top_ip2soc.drc" xil_pn:subbranch="FPGAConfiguration"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="usage_statistics_webtalk.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="webtalk.log"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
+  </files>
+
+  <transforms xmlns="http://www.xilinx.com/XMLSchema">
+    <transform xil_pn:end_ts="1655800845" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1655800845">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1655816190" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="2260237713921229197" xil_pn:start_ts="1655816190">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1655803235" xil_pn:in_ck="911016719092967904" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-8236040085216473055" xil_pn:start_ts="1655803235">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="ipcore_dir/RAM_B.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/RAM_B.v"/>
+      <outfile xil_pn:name="ipcore_dir/ROM_D.ngc"/>
+      <outfile xil_pn:name="ipcore_dir/ROM_D.v"/>
+    </transform>
+    <transform xil_pn:end_ts="1655800845" xil_pn:in_ck="6324541827786612510" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1655800845">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1655816190" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="6520856271884387737" xil_pn:start_ts="1655816190">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1655803235" xil_pn:in_ck="6324541827786612510" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-679146238380615420" xil_pn:start_ts="1655803235">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1655803235" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="4999662830556338091" xil_pn:start_ts="1655803235">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1655816850" xil_pn:in_ck="-731199249669322492" xil_pn:name="TRANEXT_xstsynthesize_virtex6" xil_pn:prop_ck="7466489246385747145" xil_pn:start_ts="1655816834">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="WarningsGenerated"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="TOP_IP2SOC.lso"/>
+      <outfile xil_pn:name="TOP_IP2SOC.ngc"/>
+      <outfile xil_pn:name="TOP_IP2SOC.ngr"/>
+      <outfile xil_pn:name="TOP_IP2SOC.prj"/>
+      <outfile xil_pn:name="TOP_IP2SOC.stx"/>
+      <outfile xil_pn:name="TOP_IP2SOC.syr"/>
+      <outfile xil_pn:name="TOP_IP2SOC.xst"/>
+      <outfile xil_pn:name="TOP_IP2SOC_xst.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1655800860" xil_pn:in_ck="8557826411608917488" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="8766458718850377412" xil_pn:start_ts="1655800860">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1655816861" xil_pn:in_ck="-20549039338532111" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-7030919728761944963" xil_pn:start_ts="1655816850">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="TOP_IP2SOC.bld"/>
+      <outfile xil_pn:name="TOP_IP2SOC.ngd"/>
+      <outfile xil_pn:name="TOP_IP2SOC_ngdbuild.xrpt"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1655816911" xil_pn:in_ck="-8800329849572836679" xil_pn:name="TRANEXT_map_virtex7" xil_pn:prop_ck="8682004332842894372" xil_pn:start_ts="1655816861">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="TOP_IP2SOC.pcf"/>
+      <outfile xil_pn:name="TOP_IP2SOC_map.map"/>
+      <outfile xil_pn:name="TOP_IP2SOC_map.mrp"/>
+      <outfile xil_pn:name="TOP_IP2SOC_map.ncd"/>
+      <outfile xil_pn:name="TOP_IP2SOC_map.ngm"/>
+      <outfile xil_pn:name="TOP_IP2SOC_map.xrpt"/>
+      <outfile xil_pn:name="TOP_IP2SOC_summary.xml"/>
+      <outfile xil_pn:name="TOP_IP2SOC_usage.xml"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1655816963" xil_pn:in_ck="7738585029506711122" xil_pn:name="TRANEXT_par_virtex5" xil_pn:prop_ck="-4683095148457160514" xil_pn:start_ts="1655816911">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="TOP_IP2SOC.ncd"/>
+      <outfile xil_pn:name="TOP_IP2SOC.pad"/>
+      <outfile xil_pn:name="TOP_IP2SOC.par"/>
+      <outfile xil_pn:name="TOP_IP2SOC.ptwx"/>
+      <outfile xil_pn:name="TOP_IP2SOC.unroutes"/>
+      <outfile xil_pn:name="TOP_IP2SOC.xpi"/>
+      <outfile xil_pn:name="TOP_IP2SOC_pad.csv"/>
+      <outfile xil_pn:name="TOP_IP2SOC_pad.txt"/>
+      <outfile xil_pn:name="TOP_IP2SOC_par.xrpt"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+    </transform>
+    <transform xil_pn:end_ts="1655817014" xil_pn:in_ck="85407430931796037" xil_pn:name="TRANEXT_bitFile_virtex7" xil_pn:prop_ck="3160107541638749219" xil_pn:start_ts="1655816963">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="TOP_IP2SOC.ut"/>
+      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
+      <outfile xil_pn:name="top_ip2soc.bgn"/>
+      <outfile xil_pn:name="top_ip2soc.bit"/>
+      <outfile xil_pn:name="top_ip2soc.drc"/>
+      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
+      <outfile xil_pn:name="webtalk.log"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1655817021" xil_pn:in_ck="8587158099876523791" xil_pn:name="TRAN_configureTargetDevice" xil_pn:prop_ck="7333617237298376541" xil_pn:start_ts="1655817019">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1655816963" xil_pn:in_ck="-8800329849572836811" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="-3742689831323817468" xil_pn:start_ts="1655816948">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="TOP_IP2SOC.twr"/>
+      <outfile xil_pn:name="TOP_IP2SOC.twx"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+    </transform>
+  </transforms>
+
+</generated_project>

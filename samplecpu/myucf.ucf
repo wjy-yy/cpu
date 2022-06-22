@@ -1,0 +1,40 @@
+
+# PlanAhead Generated physical constraints 
+
+NET "a[0]"									LOC = AA10   	| IOSTANDARD = LVCMOS15 ;
+NET "a[1]"									LOC = AB10      | IOSTANDARD = LVCMOS15 ;
+NET "a[2]"									LOC = AA13      | IOSTANDARD = LVCMOS15 ;
+NET "a[3]"									LOC = AA12      | IOSTANDARD = LVCMOS15 ;
+NET "b[0]"									LOC = Y13       | IOSTANDARD = LVCMOS15 ;
+NET "b[1]"									LOC = Y12       | IOSTANDARD = LVCMOS15 ;
+NET "b[2]"									LOC = AD11      | IOSTANDARD = LVCMOS15 ;
+NET "b[3]"									LOC = AD10      | IOSTANDARD = LVCMOS15 ;
+
+
+//NET "sw[8]"									LOC = AE10      | IOSTANDARD = LVCMOS15 ;
+//NET "sw[9]"									LOC = AE12      | IOSTANDARD = LVCMOS15 ;
+//NET "sw[10]"								LOC = AF12      | IOSTANDARD = LVCMOS15 ;
+//NET "sw[11]"								LOC = AE8       | IOSTANDARD = LVCMOS15 ;
+//NET "sw[12]"								LOC = AF8       | IOSTANDARD = LVCMOS15 ;
+//NET "sw[13]"								LOC = AE13      | IOSTANDARD = LVCMOS15 ;
+//NET "sw[14]"								LOC = AF13      | IOSTANDARD = LVCMOS15 ;
+//NET "sw[15]"								LOC = AF10      | IOSTANDARD = LVCMOS15 ;
+
+# PlanAhead Generated IO constraints 
+
+NET "led_clk" IOSTANDARD = LVCMOS33;
+NET "led_clr" IOSTANDARD = LVCMOS33;
+NET "led_do" IOSTANDARD = LVCMOS33;
+NET "led_pen" IOSTANDARD = LVCMOS33;
+
+# PlanAhead Generated physical constraints 
+
+NET "clk" LOC = AC18  | IOSTANDARD = LVCMOS18;
+NET "reset" LOC = W13  | IOSTANDARD = LVCMOS18;
+#NET "triled_R" LOC = U21;
+#NET "triled_G" LOC = U22;
+#NET "triled_B" LOC = V22;
+NET "led_clk" LOC = N26;
+NET "led_clr" LOC = N24;
+NET "led_do" LOC = M26;
+NET "led_pen" LOC = P18;
