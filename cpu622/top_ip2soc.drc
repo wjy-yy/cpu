@@ -1,0 +1,8 @@
+Release 14.7 Drc P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Wed Jun 22 11:30:38 2022
+
+drc -z TOP_IP2SOC.ncd TOP_IP2SOC.pcf
+
+DRC detected 0 errors and 0 warnings.
