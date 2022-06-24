@@ -62,7 +62,7 @@ module xgriscv(input         			        clk, reset,
   controller  c(clk, reset, opD, funct3D, funct7D, rdD, rs1D, immD, zeroD, ltD,
               immctrlD, itypeD, jalD, jalrD, bunsignedD, pcsrcD, 
               aluctrlD, aluctrl1D, alusrcaD, alusrcbD, 
-              memwriteD, lunsignedD, lwhbD, swhbD, jD, bD,
+              memwriteD, lunsignedD, jD, bD, lwhbD, swhbD,
               memtoregD, regwriteD);
 
 
@@ -71,7 +71,7 @@ module xgriscv(input         			        clk, reset,
               readdata, daddr, writedata, memwrite, pcM, pcW,
               immctrlD, itypeD, jalD, jalrD, bunsignedD, pcsrcD, 
               aluctrlD, aluctrl1D, alusrcaD, alusrcbD, 
-              memwriteD, lunsignedD, lwhbD, swhbD, jD, bD,
+              memwriteD, lunsignedD,  jD, bD, lwhbD, swhbD,
               memtoregD, regwriteD, 
               opD, funct3D, funct7D, rdD, rs1D, immD, zeroD, ltD);
 

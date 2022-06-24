@@ -126,7 +126,7 @@ begin
 			`dm_halfword: intmp <= {{16{Data_in[15]}}, Data_in[15:0]};
 			`dm_halfword_unsigned: intmp <= {16'b0, Data_in[15:0]};
 			`dm_byte: intmp <= {{24{Data_in[7]}}, Data_in[7:0]};
-			`dm_byte_unsigned: intmp <= {24'b0, Data_in[15:0]};
+			`dm_byte_unsigned: intmp <= {24'b0, Data_in[7:0]};
 		endcase
 	case(WDSel)
 		`WDSel_FromALU: WD<=aluout;

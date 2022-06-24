@@ -122,12 +122,17 @@ module datapath(
 
 	alu alu(srcaE, srcbE, 5'b0, aluctrlE, aluctrl1E, aluoutE, overflowE, zeroE, ltE, geE);
 	alu alu1(pcE, immoutE, 5'b0, `ALU_CTRL_ADD, 3'b000, PCoutE, overflowE, zeroE, ltE, geE);
+		
+	wire B;
+	assign B = bE & aluoutE[0];
+	mux2 #(`XLEN) brmux(aluoutE, PCoutE, B, pcbranchD);			 // pcsrc mux	
 
-	///////////////////////////////////////////////////////////////////////////////////
+	assign pcsrc = jE | B;
+		///////////////////////////////////////////////////////////////////////////////////
 	// EX/MEM pipeline registers
 	// for control signals
 	wire 		regwriteM, luM, memtoregM, jM, bM;
-	wire 		flushM = pcsrc;
+	wire 		flushM = 0;
 	wire [1:0] lwhbM, swhbM;
 	wire [`XLEN-1:0] srcb1M;
 	wire[`ADDR_SIZE-1:0] PCoutM;
@@ -152,7 +157,7 @@ module datapath(
   ///////////////////////////////////////////////////////////////////////////////////
   // MEM/WB pipeline registers
   // for control signals
-  wire flushW = pcsrc;
+  wire flushW = 0;
 	wire memtoregW, bW;
 		wire[`ADDR_SIZE-1:0] PCoutW;
   wire[`XLEN-1:0]		   aluoutW, dmoutW;
@@ -177,12 +182,8 @@ module datapath(
 //j -> aluoutW
 //B -> immoutW
 //connect bW, modify alu
-	wire B;
-//	assign B = bW & aluoutW[0];
-	assign B = bM & aluoutM[0];
-	mux2 #(`XLEN) brmux(aluoutM, PCoutM, B, pcbranchD);			 // pcsrc mux	
-	mux3 #(`XLEN) wdatamux(aluoutW, pcplus4W, dmoutW, {memtoregW, jW}, wdataW);			 // alu src b mux
+	mux3 #(`XLEN) wdatamux(aluoutW, pcplus4W, dmoutW, {memtoregW, jW}, wdataW);		
 	assign waddrW = rdW;
 	//assign pcsrcD = jW;
-	assign pcsrc = jW | B;
+	//assign pcsrc = jW | B;
 endmodule

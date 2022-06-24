@@ -22,7 +22,7 @@ module xgriscv_tb();
    integer counter = 0;
    
    initial begin
-      $readmemh("riscv32_sim1.dat", xgriscvp.U_imem.RAM);
+      $readmemh("riscv32_sim6.asm", xgriscvp.U_imem.RAM);
       clk = 1;
       rstn = 1;
       #5 ;

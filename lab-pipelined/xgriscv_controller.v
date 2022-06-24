@@ -92,13 +92,15 @@ module controller(
 
   wire jtype = rv32_jal;
 
+	reg jtmp;
+
   assign immctrl = {itype, stype, btype, utype, jtype};
 
   assign jal = rv32_jal;
   
   assign jalr = rv32_jalr;
 
-  assign j = rv32_jal | rv32_jalr | btype;
+  //assign j = rv32_jal | rv32_jalr | btype;
 
   assign bunsigned = rv32_bltu | rv32_bgeu;
 
@@ -123,7 +125,7 @@ module controller(
   assign regwrite = rv32_lui | rv32_auipc | rv32_addi | rv32_addrr | itype | rv32_jalr | rv32_jal;
 
 
-  always @(*)
+  always @(*)	begin
 	//aluctrl1 <= `ALU_EMP;
     case(opcode)
       `OP_LUI:    begin aluctrl1 <= `ALU_EMP;
@@ -200,8 +202,13 @@ module controller(
       default:  begin aluctrl <= `ALU_CTRL_ZERO;
 					aluctrl1 <= 3'b000;
 				end
-	
  endcase
-
+	//case(rv32_jal | rv32_jalr | btype) 
+	case(rv32_jal | rv32_jalr) 
+		1'b1:	jtmp <= 1'b1;
+		default: jtmp<=1'b0;// avoid X
+	endcase
+end
 	assign btype = aluctrl1[2:0]?1:0;
+	assign j = jtmp;
 endmodule
