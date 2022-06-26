@@ -1,0 +1,16 @@
+lui x15, 0x12345
+nop
+nop
+nop
+nop
+addi x14, x15, 0x78
+nop
+nop
+nop
+nop
+sh x14, 333(x0)
+addi x13, x14, -1
+nop
+nop
+nop
+lb x12, 333(x0)

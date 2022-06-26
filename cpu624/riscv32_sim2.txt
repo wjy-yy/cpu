@@ -1,0 +1,13 @@
+lui x10, 100
+lui x11, 205
+nop
+nop
+nop
+addi x11, x11, 13
+nop
+nop
+nop
+nop
+sw x10, 333(x0)
+sb x10, 343(x0)
+lw x12, 333(x0)

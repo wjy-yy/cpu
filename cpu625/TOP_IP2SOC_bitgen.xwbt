@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\whu\cpu\cpu625\TOP_IP2SOC.ncd
+OUTFILE=E:\whu\cpu\cpu625\TOP_IP2SOC.bit
+FAMILY=Kintex7
+PART=xc7k160t-2lffg676
+WORKINGDIR=E:\whu\cpu\cpu625
+LICENSE=WebPack
+USER_INFO=__0_0_0
