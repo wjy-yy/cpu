@@ -200,19 +200,23 @@ solve:
     addi x28, x21, 0 # row num
     addi x29, x12, 0 # col count
     jal x1, mut		 # x31 is x28*x29
-    add x28, x31, x22 # x28 = the order of the block
+    add x28, x31, x22 # x28 = the order of the block, x28 needs to multiply
+    add x28, x28, x22
+    add x28, x28, x22
+    add x28, x28, x22
     addi x15, x0, 1400
     add x15, x15, x28 # x15 is the used (used=0: it is still there)
     lw x30, 0(x15)
     bne x30, x0, ctrl# x28 is offset
-    addi x29, x0, 4
-    jal x1, mut		 # x31 is 4*offset
-    add x16, x16, x31
+    #addi x29, x0, 4
+    #jal x1, mut		 # x31 is 4*offset
+    #add x16, x16, x31
+    add x16, x16, x28
 	lw x29, 0(x16)	 # x29 is the color
     addi x17, x0, 1 # flag=1
     addi x15, x0, 1600 # clear
-    #add x15, x15, x28
-    add x15, x15, x31
+    add x15, x15, x28
+    #add x15, x15, x31
     sw x10 0(x15)
     addi x8, x15, 0
     addi x26, x0, 1 # count of joint blocks
