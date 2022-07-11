@@ -1,0 +1,799 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+E:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 2L
+-n 3 -fastpaths -xml TOP_IP2SOC.twx TOP_IP2SOC.ncd -o TOP_IP2SOC.twr
+TOP_IP2SOC.pcf -ucf Org-Sword.ucf
+
+Design file:              TOP_IP2SOC.ncd
+Physical constraint file: TOP_IP2SOC.pcf
+Device,package,speed:     xc7k160t,ffg676,C,-2L (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+================================================================================
+Timing constraint: TS_CLK_100M = PERIOD TIMEGRP "TM_CLK" 10 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 86896 paths analyzed, 3532 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.321ns.
+--------------------------------------------------------------------------------
+
+Paths for end point U6/M2/buffer_31 (SLICE_X22Y85.A4), 1818 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.679ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14 (FF)
+  Destination:          U6/M2/buffer_31 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.235ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.051ns (1.040 - 1.091)
+  Source Clock:         clk_100mhz_BUFGP rising at 0.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14 to U6/M2/buffer_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y73.CQ      Tcko                  0.223   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<15>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14
+    SLICE_X64Y72.B1      net (fanout=2)        0.456   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<14>
+    SLICE_X64Y72.COUT    Topcyb                0.299   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_lut<1>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.CIN     net (fanout=1)        0.000   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.BMUX    Tcinb                 0.157   SW_OK<6>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<5>
+    SLICE_X20Y54.D2      net (fanout=90)       2.328   SW_OK<6>
+    SLICE_X20Y54.CMUX    Topdc                 0.237   ram_addr<8>
+                                                       U5/MUX1_DispData/Mmux_o_47
+                                                       U5/MUX1_DispData/Mmux_o_2_f7_6
+    SLICE_X21Y72.A1      net (fanout=13)       0.972   Disp_num<16>
+    SLICE_X21Y72.A       Tilo                  0.043   U6/SM1/HTS3/MSEG/XLXN_26
+                                                       U6/SM1/HTS3/MSEG/XLXI_8
+    SLICE_X20Y72.D2      net (fanout=1)        0.458   U6/SM1/HTS3/MSEG/XLXN_28
+    SLICE_X20Y72.D       Tilo                  0.043   U6/XLXN_390<31>
+                                                       U6/SM1/HTS3/MSEG/XLXI_47
+    SLICE_X22Y85.B1      net (fanout=1)        0.753   U6/XLXN_390<31>
+    SLICE_X22Y85.B       Tilo                  0.043   U6/M2/buffer<32>
+                                                       U6/M2/mux8811
+    SLICE_X22Y85.A4      net (fanout=1)        0.244   U6/M2/state[1]_GND_3_o_wide_mux_15_OUT<31>
+    SLICE_X22Y85.CLK     Tas                  -0.021   U6/M2/buffer<32>
+                                                       U6/M2/buffer_31_rstpot
+                                                       U6/M2/buffer_31
+    -------------------------------------------------  ---------------------------
+    Total                                      6.235ns (1.024ns logic, 5.211ns route)
+                                                       (16.4% logic, 83.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.685ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14 (FF)
+  Destination:          U6/M2/buffer_31 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.229ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.051ns (1.040 - 1.091)
+  Source Clock:         clk_100mhz_BUFGP rising at 0.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14 to U6/M2/buffer_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y73.CQ      Tcko                  0.223   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<15>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14
+    SLICE_X64Y72.B1      net (fanout=2)        0.456   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<14>
+    SLICE_X64Y72.COUT    Topcyb                0.299   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_lut<1>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.CIN     net (fanout=1)        0.000   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.BMUX    Tcinb                 0.157   SW_OK<6>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<5>
+    SLICE_X20Y54.C2      net (fanout=90)       2.320   SW_OK<6>
+    SLICE_X20Y54.CMUX    Tilo                  0.239   ram_addr<8>
+                                                       U5/MUX1_DispData/Mmux_o_37
+                                                       U5/MUX1_DispData/Mmux_o_2_f7_6
+    SLICE_X21Y72.A1      net (fanout=13)       0.972   Disp_num<16>
+    SLICE_X21Y72.A       Tilo                  0.043   U6/SM1/HTS3/MSEG/XLXN_26
+                                                       U6/SM1/HTS3/MSEG/XLXI_8
+    SLICE_X20Y72.D2      net (fanout=1)        0.458   U6/SM1/HTS3/MSEG/XLXN_28
+    SLICE_X20Y72.D       Tilo                  0.043   U6/XLXN_390<31>
+                                                       U6/SM1/HTS3/MSEG/XLXI_47
+    SLICE_X22Y85.B1      net (fanout=1)        0.753   U6/XLXN_390<31>
+    SLICE_X22Y85.B       Tilo                  0.043   U6/M2/buffer<32>
+                                                       U6/M2/mux8811
+    SLICE_X22Y85.A4      net (fanout=1)        0.244   U6/M2/state[1]_GND_3_o_wide_mux_15_OUT<31>
+    SLICE_X22Y85.CLK     Tas                  -0.021   U6/M2/buffer<32>
+                                                       U6/M2/buffer_31_rstpot
+                                                       U6/M2/buffer_31
+    -------------------------------------------------  ---------------------------
+    Total                                      6.229ns (1.026ns logic, 5.203ns route)
+                                                       (16.5% logic, 83.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.686ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_6/counter_9 (FF)
+  Destination:          U6/M2/buffer_31 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.226ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.053ns (1.040 - 1.093)
+  Source Clock:         clk_100mhz_BUFGP rising at 0.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_6/counter_9 to U6/M2/buffer_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y72.BQ      Tcko                  0.223   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<11>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/counter_9
+    SLICE_X64Y72.A1      net (fanout=2)        0.457   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<9>
+    SLICE_X64Y72.COUT    Topcya                0.289   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_lut<0>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.CIN     net (fanout=1)        0.000   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.BMUX    Tcinb                 0.157   SW_OK<6>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<5>
+    SLICE_X20Y54.D2      net (fanout=90)       2.328   SW_OK<6>
+    SLICE_X20Y54.CMUX    Topdc                 0.237   ram_addr<8>
+                                                       U5/MUX1_DispData/Mmux_o_47
+                                                       U5/MUX1_DispData/Mmux_o_2_f7_6
+    SLICE_X21Y72.A1      net (fanout=13)       0.972   Disp_num<16>
+    SLICE_X21Y72.A       Tilo                  0.043   U6/SM1/HTS3/MSEG/XLXN_26
+                                                       U6/SM1/HTS3/MSEG/XLXI_8
+    SLICE_X20Y72.D2      net (fanout=1)        0.458   U6/SM1/HTS3/MSEG/XLXN_28
+    SLICE_X20Y72.D       Tilo                  0.043   U6/XLXN_390<31>
+                                                       U6/SM1/HTS3/MSEG/XLXI_47
+    SLICE_X22Y85.B1      net (fanout=1)        0.753   U6/XLXN_390<31>
+    SLICE_X22Y85.B       Tilo                  0.043   U6/M2/buffer<32>
+                                                       U6/M2/mux8811
+    SLICE_X22Y85.A4      net (fanout=1)        0.244   U6/M2/state[1]_GND_3_o_wide_mux_15_OUT<31>
+    SLICE_X22Y85.CLK     Tas                  -0.021   U6/M2/buffer<32>
+                                                       U6/M2/buffer_31_rstpot
+                                                       U6/M2/buffer_31
+    -------------------------------------------------  ---------------------------
+    Total                                      6.226ns (1.014ns logic, 5.212ns route)
+                                                       (16.3% logic, 83.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point U6/M2/buffer_28 (SLICE_X20Y74.C5), 1410 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.820ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14 (FF)
+  Destination:          U6/M2/buffer_28 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.085ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.060ns (1.031 - 1.091)
+  Source Clock:         clk_100mhz_BUFGP rising at 0.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14 to U6/M2/buffer_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y73.CQ      Tcko                  0.223   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<15>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14
+    SLICE_X64Y72.B1      net (fanout=2)        0.456   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<14>
+    SLICE_X64Y72.COUT    Topcyb                0.299   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_lut<1>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.CIN     net (fanout=1)        0.000   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.BMUX    Tcinb                 0.157   SW_OK<6>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<5>
+    SLICE_X12Y55.D2      net (fanout=90)       2.274   SW_OK<6>
+    SLICE_X12Y55.CMUX    Topdc                 0.237   inst<18>
+                                                       U5/MUX1_DispData/Mmux_o_49
+                                                       U5/MUX1_DispData/Mmux_o_2_f7_8
+    SLICE_X21Y72.D4      net (fanout=13)       0.972   Disp_num<18>
+    SLICE_X21Y72.D       Tilo                  0.043   U6/SM1/HTS3/MSEG/XLXN_26
+                                                       U6/SM1/HTS3/MSEG/XLXI_6
+    SLICE_X20Y72.B2      net (fanout=2)        0.443   U6/SM1/HTS3/MSEG/XLXN_26
+    SLICE_X20Y72.B       Tilo                  0.043   U6/XLXN_390<31>
+                                                       U6/SM1/HTS3/MSEG/XLXI_29
+    SLICE_X20Y72.A4      net (fanout=1)        0.244   U6/SM1/HTS3/MSEG/XLXN_211
+    SLICE_X20Y72.A       Tilo                  0.043   U6/XLXN_390<31>
+                                                       U6/SM1/HTS3/MSEG/XLXI_50
+    SLICE_X20Y74.D1      net (fanout=1)        0.467   U6/XLXN_390<28>
+    SLICE_X20Y74.D       Tilo                  0.043   U6/M2/buffer<28>
+                                                       U6/M2/mux8411
+    SLICE_X20Y74.C5      net (fanout=1)        0.164   U6/M2/state[1]_GND_3_o_wide_mux_15_OUT<28>
+    SLICE_X20Y74.CLK     Tas                  -0.023   U6/M2/buffer<28>
+                                                       U6/M2/buffer_28_rstpot
+                                                       U6/M2/buffer_28
+    -------------------------------------------------  ---------------------------
+    Total                                      6.085ns (1.065ns logic, 5.020ns route)
+                                                       (17.5% logic, 82.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.826ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14 (FF)
+  Destination:          U6/M2/buffer_28 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.079ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.060ns (1.031 - 1.091)
+  Source Clock:         clk_100mhz_BUFGP rising at 0.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14 to U6/M2/buffer_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y73.CQ      Tcko                  0.223   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<15>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14
+    SLICE_X64Y72.B1      net (fanout=2)        0.456   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<14>
+    SLICE_X64Y72.COUT    Topcyb                0.299   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_lut<1>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.CIN     net (fanout=1)        0.000   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.BMUX    Tcinb                 0.157   SW_OK<6>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<5>
+    SLICE_X12Y55.C2      net (fanout=90)       2.266   SW_OK<6>
+    SLICE_X12Y55.CMUX    Tilo                  0.239   inst<18>
+                                                       U5/MUX1_DispData/Mmux_o_39
+                                                       U5/MUX1_DispData/Mmux_o_2_f7_8
+    SLICE_X21Y72.D4      net (fanout=13)       0.972   Disp_num<18>
+    SLICE_X21Y72.D       Tilo                  0.043   U6/SM1/HTS3/MSEG/XLXN_26
+                                                       U6/SM1/HTS3/MSEG/XLXI_6
+    SLICE_X20Y72.B2      net (fanout=2)        0.443   U6/SM1/HTS3/MSEG/XLXN_26
+    SLICE_X20Y72.B       Tilo                  0.043   U6/XLXN_390<31>
+                                                       U6/SM1/HTS3/MSEG/XLXI_29
+    SLICE_X20Y72.A4      net (fanout=1)        0.244   U6/SM1/HTS3/MSEG/XLXN_211
+    SLICE_X20Y72.A       Tilo                  0.043   U6/XLXN_390<31>
+                                                       U6/SM1/HTS3/MSEG/XLXI_50
+    SLICE_X20Y74.D1      net (fanout=1)        0.467   U6/XLXN_390<28>
+    SLICE_X20Y74.D       Tilo                  0.043   U6/M2/buffer<28>
+                                                       U6/M2/mux8411
+    SLICE_X20Y74.C5      net (fanout=1)        0.164   U6/M2/state[1]_GND_3_o_wide_mux_15_OUT<28>
+    SLICE_X20Y74.CLK     Tas                  -0.023   U6/M2/buffer<28>
+                                                       U6/M2/buffer_28_rstpot
+                                                       U6/M2/buffer_28
+    -------------------------------------------------  ---------------------------
+    Total                                      6.079ns (1.067ns logic, 5.012ns route)
+                                                       (17.6% logic, 82.4% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.827ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_6/counter_9 (FF)
+  Destination:          U6/M2/buffer_28 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.076ns (Levels of Logic = 8)
+  Clock Path Skew:      -0.062ns (1.031 - 1.093)
+  Source Clock:         clk_100mhz_BUFGP rising at 0.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_6/counter_9 to U6/M2/buffer_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y72.BQ      Tcko                  0.223   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<11>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/counter_9
+    SLICE_X64Y72.A1      net (fanout=2)        0.457   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<9>
+    SLICE_X64Y72.COUT    Topcya                0.289   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_lut<0>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.CIN     net (fanout=1)        0.000   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.BMUX    Tcinb                 0.157   SW_OK<6>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<5>
+    SLICE_X12Y55.D2      net (fanout=90)       2.274   SW_OK<6>
+    SLICE_X12Y55.CMUX    Topdc                 0.237   inst<18>
+                                                       U5/MUX1_DispData/Mmux_o_49
+                                                       U5/MUX1_DispData/Mmux_o_2_f7_8
+    SLICE_X21Y72.D4      net (fanout=13)       0.972   Disp_num<18>
+    SLICE_X21Y72.D       Tilo                  0.043   U6/SM1/HTS3/MSEG/XLXN_26
+                                                       U6/SM1/HTS3/MSEG/XLXI_6
+    SLICE_X20Y72.B2      net (fanout=2)        0.443   U6/SM1/HTS3/MSEG/XLXN_26
+    SLICE_X20Y72.B       Tilo                  0.043   U6/XLXN_390<31>
+                                                       U6/SM1/HTS3/MSEG/XLXI_29
+    SLICE_X20Y72.A4      net (fanout=1)        0.244   U6/SM1/HTS3/MSEG/XLXN_211
+    SLICE_X20Y72.A       Tilo                  0.043   U6/XLXN_390<31>
+                                                       U6/SM1/HTS3/MSEG/XLXI_50
+    SLICE_X20Y74.D1      net (fanout=1)        0.467   U6/XLXN_390<28>
+    SLICE_X20Y74.D       Tilo                  0.043   U6/M2/buffer<28>
+                                                       U6/M2/mux8411
+    SLICE_X20Y74.C5      net (fanout=1)        0.164   U6/M2/state[1]_GND_3_o_wide_mux_15_OUT<28>
+    SLICE_X20Y74.CLK     Tas                  -0.023   U6/M2/buffer<28>
+                                                       U6/M2/buffer_28_rstpot
+                                                       U6/M2/buffer_28
+    -------------------------------------------------  ---------------------------
+    Total                                      6.076ns (1.055ns logic, 5.021ns route)
+                                                       (17.4% logic, 82.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point U6/M2/buffer_29 (SLICE_X20Y75.A4), 900 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.883ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14 (FF)
+  Destination:          U6/M2/buffer_29 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.022ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.060ns (1.031 - 1.091)
+  Source Clock:         clk_100mhz_BUFGP rising at 0.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14 to U6/M2/buffer_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y73.CQ      Tcko                  0.223   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<15>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14
+    SLICE_X64Y72.B1      net (fanout=2)        0.456   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<14>
+    SLICE_X64Y72.COUT    Topcyb                0.299   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_lut<1>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.CIN     net (fanout=1)        0.000   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.BMUX    Tcinb                 0.157   SW_OK<6>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<5>
+    SLICE_X12Y55.D2      net (fanout=90)       2.274   SW_OK<6>
+    SLICE_X12Y55.CMUX    Topdc                 0.237   inst<18>
+                                                       U5/MUX1_DispData/Mmux_o_49
+                                                       U5/MUX1_DispData/Mmux_o_2_f7_8
+    SLICE_X21Y73.C2      net (fanout=13)       1.188   Disp_num<18>
+    SLICE_X21Y73.C       Tilo                  0.043   U6/XLXN_390<30>
+                                                       U6/SM1/HTS3/MSEG/XLXI_20
+    SLICE_X20Y73.D2      net (fanout=2)        0.370   U6/SM1/HTS3/MSEG/XLXN_74
+    SLICE_X20Y73.D       Tilo                  0.043   U6/XLXN_390<29>
+                                                       U6/SM1/HTS3/MSEG/XLXI_49
+    SLICE_X20Y75.B1      net (fanout=1)        0.466   U6/XLXN_390<29>
+    SLICE_X20Y75.B       Tilo                  0.043   U6/M2/buffer<30>
+                                                       U6/M2/mux8511
+    SLICE_X20Y75.A4      net (fanout=1)        0.244   U6/M2/state[1]_GND_3_o_wide_mux_15_OUT<29>
+    SLICE_X20Y75.CLK     Tas                  -0.021   U6/M2/buffer<30>
+                                                       U6/M2/buffer_29_rstpot
+                                                       U6/M2/buffer_29
+    -------------------------------------------------  ---------------------------
+    Total                                      6.022ns (1.024ns logic, 4.998ns route)
+                                                       (17.0% logic, 83.0% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.889ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14 (FF)
+  Destination:          U6/M2/buffer_29 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.016ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.060ns (1.031 - 1.091)
+  Source Clock:         clk_100mhz_BUFGP rising at 0.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14 to U6/M2/buffer_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y73.CQ      Tcko                  0.223   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<15>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14
+    SLICE_X64Y72.B1      net (fanout=2)        0.456   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<14>
+    SLICE_X64Y72.COUT    Topcyb                0.299   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_lut<1>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.CIN     net (fanout=1)        0.000   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.BMUX    Tcinb                 0.157   SW_OK<6>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<5>
+    SLICE_X12Y55.C2      net (fanout=90)       2.266   SW_OK<6>
+    SLICE_X12Y55.CMUX    Tilo                  0.239   inst<18>
+                                                       U5/MUX1_DispData/Mmux_o_39
+                                                       U5/MUX1_DispData/Mmux_o_2_f7_8
+    SLICE_X21Y73.C2      net (fanout=13)       1.188   Disp_num<18>
+    SLICE_X21Y73.C       Tilo                  0.043   U6/XLXN_390<30>
+                                                       U6/SM1/HTS3/MSEG/XLXI_20
+    SLICE_X20Y73.D2      net (fanout=2)        0.370   U6/SM1/HTS3/MSEG/XLXN_74
+    SLICE_X20Y73.D       Tilo                  0.043   U6/XLXN_390<29>
+                                                       U6/SM1/HTS3/MSEG/XLXI_49
+    SLICE_X20Y75.B1      net (fanout=1)        0.466   U6/XLXN_390<29>
+    SLICE_X20Y75.B       Tilo                  0.043   U6/M2/buffer<30>
+                                                       U6/M2/mux8511
+    SLICE_X20Y75.A4      net (fanout=1)        0.244   U6/M2/state[1]_GND_3_o_wide_mux_15_OUT<29>
+    SLICE_X20Y75.CLK     Tas                  -0.021   U6/M2/buffer<30>
+                                                       U6/M2/buffer_29_rstpot
+                                                       U6/M2/buffer_29
+    -------------------------------------------------  ---------------------------
+    Total                                      6.016ns (1.026ns logic, 4.990ns route)
+                                                       (17.1% logic, 82.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.890ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_6/counter_9 (FF)
+  Destination:          U6/M2/buffer_29 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.013ns (Levels of Logic = 7)
+  Clock Path Skew:      -0.062ns (1.031 - 1.093)
+  Source Clock:         clk_100mhz_BUFGP rising at 0.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.035ns
+
+  Clock Uncertainty:          0.035ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE
+    Total System Jitter (TSJ):  0.070ns
+    Total Input Jitter (TIJ):   0.000ns
+    Discrete Jitter (DJ):       0.000ns
+    Phase Error (PE):           0.000ns
+
+  Maximum Data Path at Slow Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_6/counter_9 to U6/M2/buffer_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X65Y72.BQ      Tcko                  0.223   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<11>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/counter_9
+    SLICE_X64Y72.A1      net (fanout=2)        0.457   Input_switch_btn/Santi_jitter/Aj_sw_6/counter<9>
+    SLICE_X64Y72.COUT    Topcya                0.289   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_lut<0>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.CIN     net (fanout=1)        0.000   Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<3>
+    SLICE_X64Y73.BMUX    Tcinb                 0.157   SW_OK<6>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_6/Mcompar_counter[31]_GND_74_o_LessThan_2_o_cy<5>
+    SLICE_X12Y55.D2      net (fanout=90)       2.274   SW_OK<6>
+    SLICE_X12Y55.CMUX    Topdc                 0.237   inst<18>
+                                                       U5/MUX1_DispData/Mmux_o_49
+                                                       U5/MUX1_DispData/Mmux_o_2_f7_8
+    SLICE_X21Y73.C2      net (fanout=13)       1.188   Disp_num<18>
+    SLICE_X21Y73.C       Tilo                  0.043   U6/XLXN_390<30>
+                                                       U6/SM1/HTS3/MSEG/XLXI_20
+    SLICE_X20Y73.D2      net (fanout=2)        0.370   U6/SM1/HTS3/MSEG/XLXN_74
+    SLICE_X20Y73.D       Tilo                  0.043   U6/XLXN_390<29>
+                                                       U6/SM1/HTS3/MSEG/XLXI_49
+    SLICE_X20Y75.B1      net (fanout=1)        0.466   U6/XLXN_390<29>
+    SLICE_X20Y75.B       Tilo                  0.043   U6/M2/buffer<30>
+                                                       U6/M2/mux8511
+    SLICE_X20Y75.A4      net (fanout=1)        0.244   U6/M2/state[1]_GND_3_o_wide_mux_15_OUT<29>
+    SLICE_X20Y75.CLK     Tas                  -0.021   U6/M2/buffer<30>
+                                                       U6/M2/buffer_29_rstpot
+                                                       U6/M2/buffer_29
+    -------------------------------------------------  ---------------------------
+    Total                                      6.013ns (1.014ns logic, 4.999ns route)
+                                                       (16.9% logic, 83.1% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_CLK_100M = PERIOD TIMEGRP "TM_CLK" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point U6/M2/shift_count_0 (SLICE_X6Y88.A6), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.169ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               U6/M2/s_clk (FF)
+  Destination:          U6/M2/shift_count_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.183ns (Levels of Logic = 1)
+  Clock Path Skew:      0.014ns (0.077 - 0.063)
+  Source Clock:         clk_100mhz_BUFGP rising at 10.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: U6/M2/s_clk to U6/M2/shift_count_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X7Y89.AQ       Tcko                  0.100   seg_clk_OBUF
+                                                       U6/M2/s_clk
+    SLICE_X6Y88.A6       net (fanout=7)        0.142   seg_clk_OBUF
+    SLICE_X6Y88.CLK      Tah         (-Th)     0.059   U6/M2/shift_count<1>
+                                                       U6/M2/shift_count_0_rstpot
+                                                       U6/M2/shift_count_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.183ns (0.041ns logic, 0.142ns route)
+                                                       (22.4% logic, 77.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Input_switch_btn/Santi_jitter/Aj_sw_13/counter_16 (SLICE_X67Y50.CIN), 16 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.183ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_13/counter_15 (FF)
+  Destination:          Input_switch_btn/Santi_jitter/Aj_sw_13/counter_16 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.322ns (Levels of Logic = 2)
+  Clock Path Skew:      0.139ns (0.679 - 0.540)
+  Source Clock:         clk_100mhz_BUFGP rising at 10.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_13/counter_15 to Input_switch_btn/Santi_jitter/Aj_sw_13/counter_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X67Y49.DQ      Tcko                  0.100   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<15>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/counter_15
+    SLICE_X67Y49.D3      net (fanout=2)        0.139   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<15>
+    SLICE_X67Y49.COUT    Topcyd                0.112   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<15>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/counter<15>_rt
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/Mcount_counter_cy<15>
+    SLICE_X67Y50.CIN     net (fanout=1)        0.001   Input_switch_btn/Santi_jitter/Aj_sw_13/Mcount_counter_cy<15>
+    SLICE_X67Y50.CLK     Tckcin      (-Th)     0.030   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<16>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/Mcount_counter_xor<16>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/counter_16
+    -------------------------------------------------  ---------------------------
+    Total                                      0.322ns (0.182ns logic, 0.140ns route)
+                                                       (56.5% logic, 43.5% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.206ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_13/counter_11 (FF)
+  Destination:          Input_switch_btn/Santi_jitter/Aj_sw_13/counter_16 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.345ns (Levels of Logic = 3)
+  Clock Path Skew:      0.139ns (0.679 - 0.540)
+  Source Clock:         clk_100mhz_BUFGP rising at 10.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_13/counter_11 to Input_switch_btn/Santi_jitter/Aj_sw_13/counter_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X67Y48.DQ      Tcko                  0.100   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<11>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/counter_11
+    SLICE_X67Y48.D3      net (fanout=2)        0.137   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<11>
+    SLICE_X67Y48.COUT    Topcyd                0.112   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<11>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/counter<11>_rt
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/Mcount_counter_cy<11>
+    SLICE_X67Y49.CIN     net (fanout=1)        0.000   Input_switch_btn/Santi_jitter/Aj_sw_13/Mcount_counter_cy<11>
+    SLICE_X67Y49.COUT    Tbyp                  0.025   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<15>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/Mcount_counter_cy<15>
+    SLICE_X67Y50.CIN     net (fanout=1)        0.001   Input_switch_btn/Santi_jitter/Aj_sw_13/Mcount_counter_cy<15>
+    SLICE_X67Y50.CLK     Tckcin      (-Th)     0.030   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<16>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/Mcount_counter_xor<16>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/counter_16
+    -------------------------------------------------  ---------------------------
+    Total                                      0.345ns (0.207ns logic, 0.138ns route)
+                                                       (60.0% logic, 40.0% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.212ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_13/counter_12 (FF)
+  Destination:          Input_switch_btn/Santi_jitter/Aj_sw_13/counter_16 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.351ns (Levels of Logic = 2)
+  Clock Path Skew:      0.139ns (0.679 - 0.540)
+  Source Clock:         clk_100mhz_BUFGP rising at 10.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_13/counter_12 to Input_switch_btn/Santi_jitter/Aj_sw_13/counter_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X67Y49.AQ      Tcko                  0.100   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<15>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/counter_12
+    SLICE_X67Y49.A3      net (fanout=2)        0.138   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<12>
+    SLICE_X67Y49.COUT    Topcya                0.142   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<15>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/counter<12>_rt
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/Mcount_counter_cy<15>
+    SLICE_X67Y50.CIN     net (fanout=1)        0.001   Input_switch_btn/Santi_jitter/Aj_sw_13/Mcount_counter_cy<15>
+    SLICE_X67Y50.CLK     Tckcin      (-Th)     0.030   Input_switch_btn/Santi_jitter/Aj_sw_13/counter<16>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/Mcount_counter_xor<16>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_13/counter_16
+    -------------------------------------------------  ---------------------------
+    Total                                      0.351ns (0.212ns logic, 0.139ns route)
+                                                       (60.4% logic, 39.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Input_switch_btn/Santi_jitter/Aj_sw_11/counter_8 (SLICE_X89Y50.CIN), 8 paths
+--------------------------------------------------------------------------------
+Slack (hold path):      0.183ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_11/counter_7 (FF)
+  Destination:          Input_switch_btn/Santi_jitter/Aj_sw_11/counter_8 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.322ns (Levels of Logic = 2)
+  Clock Path Skew:      0.139ns (0.712 - 0.573)
+  Source Clock:         clk_100mhz_BUFGP rising at 10.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_11/counter_7 to Input_switch_btn/Santi_jitter/Aj_sw_11/counter_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X89Y49.DQ      Tcko                  0.100   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<7>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/counter_7
+    SLICE_X89Y49.D3      net (fanout=2)        0.139   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<7>
+    SLICE_X89Y49.COUT    Topcyd                0.112   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<7>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/counter<7>_rt
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/Mcount_counter_cy<7>
+    SLICE_X89Y50.CIN     net (fanout=1)        0.001   Input_switch_btn/Santi_jitter/Aj_sw_11/Mcount_counter_cy<7>
+    SLICE_X89Y50.CLK     Tckcin      (-Th)     0.030   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<11>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/Mcount_counter_cy<11>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/counter_8
+    -------------------------------------------------  ---------------------------
+    Total                                      0.322ns (0.182ns logic, 0.140ns route)
+                                                       (56.5% logic, 43.5% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.199ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_11/counter_3 (FF)
+  Destination:          Input_switch_btn/Santi_jitter/Aj_sw_11/counter_8 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.338ns (Levels of Logic = 3)
+  Clock Path Skew:      0.139ns (0.712 - 0.573)
+  Source Clock:         clk_100mhz_BUFGP rising at 10.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_11/counter_3 to Input_switch_btn/Santi_jitter/Aj_sw_11/counter_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X89Y48.DQ      Tcko                  0.100   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<3>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/counter_3
+    SLICE_X89Y48.D3      net (fanout=1)        0.130   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<3>
+    SLICE_X89Y48.COUT    Topcyd                0.112   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<3>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/counter<3>_rt
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/Mcount_counter_cy<3>
+    SLICE_X89Y49.CIN     net (fanout=1)        0.000   Input_switch_btn/Santi_jitter/Aj_sw_11/Mcount_counter_cy<3>
+    SLICE_X89Y49.COUT    Tbyp                  0.025   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<7>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/Mcount_counter_cy<7>
+    SLICE_X89Y50.CIN     net (fanout=1)        0.001   Input_switch_btn/Santi_jitter/Aj_sw_11/Mcount_counter_cy<7>
+    SLICE_X89Y50.CLK     Tckcin      (-Th)     0.030   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<11>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/Mcount_counter_cy<11>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/counter_8
+    -------------------------------------------------  ---------------------------
+    Total                                      0.338ns (0.207ns logic, 0.131ns route)
+                                                       (61.2% logic, 38.8% route)
+
+--------------------------------------------------------------------------------
+Slack (hold path):      0.203ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               Input_switch_btn/Santi_jitter/Aj_sw_11/counter_4 (FF)
+  Destination:          Input_switch_btn/Santi_jitter/Aj_sw_11/counter_8 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.342ns (Levels of Logic = 2)
+  Clock Path Skew:      0.139ns (0.712 - 0.573)
+  Source Clock:         clk_100mhz_BUFGP rising at 10.000ns
+  Destination Clock:    clk_100mhz_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path at Fast Process Corner: Input_switch_btn/Santi_jitter/Aj_sw_11/counter_4 to Input_switch_btn/Santi_jitter/Aj_sw_11/counter_8
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X89Y49.AQ      Tcko                  0.100   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<7>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/counter_4
+    SLICE_X89Y49.A3      net (fanout=1)        0.129   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<4>
+    SLICE_X89Y49.COUT    Topcya                0.142   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<7>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/counter<4>_rt
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/Mcount_counter_cy<7>
+    SLICE_X89Y50.CIN     net (fanout=1)        0.001   Input_switch_btn/Santi_jitter/Aj_sw_11/Mcount_counter_cy<7>
+    SLICE_X89Y50.CLK     Tckcin      (-Th)     0.030   Input_switch_btn/Santi_jitter/Aj_sw_11/counter<11>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/Mcount_counter_cy<11>
+                                                       Input_switch_btn/Santi_jitter/Aj_sw_11/counter_8
+    -------------------------------------------------  ---------------------------
+    Total                                      0.342ns (0.212ns logic, 0.130ns route)
+                                                       (62.0% logic, 38.0% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_CLK_100M = PERIOD TIMEGRP "TM_CLK" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 8.161ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLKL
+  Logical resource: U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLKL
+  Location pin: RAMB36_X3Y11.CLKARDCLKL
+  Clock network: clk_100mhz_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.161ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKA)
+  Physical resource: U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLKU
+  Logical resource: U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKARDCLKU
+  Location pin: RAMB36_X3Y11.CLKARDCLKU
+  Clock network: clk_100mhz_BUFGP
+--------------------------------------------------------------------------------
+Slack: 8.161ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 1.839ns (543.774MHz) (Trper_CLKB)
+  Physical resource: U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKBWRCLKL
+  Logical resource: U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram/CLKBWRCLKL
+  Location pin: RAMB36_X3Y11.CLKBWRCLKL
+  Clock network: clk_100mhz_BUFGP
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Clock to Setup on destination clock clk_100mhz
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_100mhz     |    6.321|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 86896 paths, 0 nets, and 3566 connections
+
+Design statistics:
+   Minimum period:   6.321ns{1}   (Maximum frequency: 158.203MHz)
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Mon Jul 11 20:59:55 2022 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 5125 MB
+
+
+

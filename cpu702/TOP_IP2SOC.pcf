@@ -1,0 +1,908 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Mon Jul 11 20:58:28 2022
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "seg_clk" LOCATE = SITE "M24" LEVEL 1;
+COMP "VGA_R<0>" LOCATE = SITE "N21" LEVEL 1;
+COMP "VGA_R<3>" LOCATE = SITE "P21" LEVEL 1;
+COMP "VGA_R<1>" LOCATE = SITE "N22" LEVEL 1;
+COMP "VGA_R<2>" LOCATE = SITE "R21" LEVEL 1;
+COMP "CR" LOCATE = SITE "V22" LEVEL 1;
+COMP "BTN_x<4>" LOCATE = SITE "W16" LEVEL 1;
+COMP "BTN_x<3>" LOCATE = SITE "W15" LEVEL 1;
+COMP "BTN_x<2>" LOCATE = SITE "W19" LEVEL 1;
+COMP "BTN_x<1>" LOCATE = SITE "W18" LEVEL 1;
+COMP "BTN_x<0>" LOCATE = SITE "V17" LEVEL 1;
+COMP "seg_clrn" LOCATE = SITE "M20" LEVEL 1;
+COMP "RDY" LOCATE = SITE "U21" LEVEL 1;
+COMP "led_sout" LOCATE = SITE "M26" LEVEL 1;
+COMP "LED_PEN" LOCATE = SITE "P18" LEVEL 1;
+COMP "clk_100mhz" LOCATE = SITE "AC18" LEVEL 1;
+COMP "VGA_B<0>" LOCATE = SITE "T20" LEVEL 1;
+COMP "VGA_B<3>" LOCATE = SITE "T23" LEVEL 1;
+COMP "VGA_B<1>" LOCATE = SITE "R20" LEVEL 1;
+COMP "VGA_B<2>" LOCATE = SITE "T22" LEVEL 1;
+COMP "led_clk" LOCATE = SITE "N26" LEVEL 1;
+COMP "VGA_G<0>" LOCATE = SITE "R22" LEVEL 1;
+COMP "VGA_G<3>" LOCATE = SITE "T25" LEVEL 1;
+COMP "VGA_G<1>" LOCATE = SITE "R23" LEVEL 1;
+COMP "VGA_G<2>" LOCATE = SITE "T24" LEVEL 1;
+COMP "BTN_y<3>" LOCATE = SITE "W14" LEVEL 1;
+COMP "BTN_y<2>" LOCATE = SITE "V14" LEVEL 1;
+COMP "BTN_y<1>" LOCATE = SITE "V19" LEVEL 1;
+COMP "BTN_y<0>" LOCATE = SITE "V18" LEVEL 1;
+COMP "readn" LOCATE = SITE "U22" LEVEL 1;
+COMP "VSYNC" LOCATE = SITE "M21" LEVEL 1;
+COMP "seg_sout" LOCATE = SITE "L24" LEVEL 1;
+COMP "SW<10>" LOCATE = SITE "AF12" LEVEL 1;
+COMP "SW<11>" LOCATE = SITE "AE8" LEVEL 1;
+COMP "SW<12>" LOCATE = SITE "AF8" LEVEL 1;
+COMP "SW<13>" LOCATE = SITE "AE13" LEVEL 1;
+COMP "SW<14>" LOCATE = SITE "AF13" LEVEL 1;
+COMP "SW<15>" LOCATE = SITE "AF10" LEVEL 1;
+COMP "SEG_PEN" LOCATE = SITE "R18" LEVEL 1;
+COMP "SW<0>" LOCATE = SITE "AA10" LEVEL 1;
+COMP "SW<1>" LOCATE = SITE "AB10" LEVEL 1;
+COMP "SW<2>" LOCATE = SITE "AA13" LEVEL 1;
+COMP "SW<3>" LOCATE = SITE "AA12" LEVEL 1;
+COMP "SW<4>" LOCATE = SITE "Y13" LEVEL 1;
+COMP "SW<5>" LOCATE = SITE "Y12" LEVEL 1;
+COMP "SW<6>" LOCATE = SITE "AD11" LEVEL 1;
+COMP "SW<7>" LOCATE = SITE "AD10" LEVEL 1;
+COMP "SW<8>" LOCATE = SITE "AE10" LEVEL 1;
+COMP "SW<9>" LOCATE = SITE "AE12" LEVEL 1;
+COMP "led_clrn" LOCATE = SITE "N24" LEVEL 1;
+COMP "RSTN" LOCATE = SITE "W13" LEVEL 1;
+COMP "HSYNC" LOCATE = SITE "M22" LEVEL 1;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKU;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKL;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKU;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKL;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKU;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKL;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKU;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKL;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKU;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKL;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKU;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKL;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKU;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKARDCLKL;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKU;
+PIN
+        U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>
+        = BEL
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram"
+        PINNAME CLKBWRCLKL;
+TIMEGRP TM_CLK = BEL "nowy_0" BEL "nowy_1" BEL "nowy_2" BEL "sc_0" BEL "sc_1"
+        BEL "sc_2" BEL "sc_3" BEL "sc_4" BEL "sc_5" BEL "sc_6" BEL "sc_7" BEL
+        "sc_8" BEL "sc_9" BEL "sc_10" BEL "sc_11" BEL "sc_12" BEL "sc_13" BEL
+        "sc_14" BEL "sc_15" BEL "sc_16" BEL "sc_17" BEL "sc_18" BEL "sc_19"
+        BEL "sc_20" BEL "sc_21" BEL "sc_22" BEL "sc_23" BEL "sc_24" BEL
+        "sc_25" BEL "sc_26" BEL "sc_27" BEL "sc_28" BEL "sc_29" BEL "sc_30"
+        BEL "sc_31" BEL "nowx_0" BEL "nowx_1" BEL "nowx_2" BEL "U/VGACLK_0"
+        BEL "U/VGACLK_1" BEL "U8/clkdiv_0" BEL "U8/clkdiv_1" BEL "U8/clkdiv_2"
+        BEL "U8/clkdiv_3" BEL "U8/clkdiv_4" BEL "U8/clkdiv_5" BEL
+        "U8/clkdiv_6" BEL "U8/clkdiv_7" BEL "U8/clkdiv_8" BEL "U8/clkdiv_9"
+        BEL "U8/clkdiv_10" BEL "U8/clkdiv_11" BEL "U8/clkdiv_12" BEL
+        "U8/clkdiv_13" BEL "U8/clkdiv_14" BEL "U8/clkdiv_15" BEL
+        "U8/clkdiv_16" BEL "U8/clkdiv_17" BEL "U8/clkdiv_18" BEL
+        "U8/clkdiv_19" BEL "U8/clkdiv_20" BEL "U8/clkdiv_21" BEL
+        "U8/clkdiv_22" BEL "U8/clkdiv_23" BEL "U8/clkdiv_24" BEL
+        "U8/clkdiv_25" BEL "U8/clkdiv_26" BEL "U8/clkdiv_27" BEL
+        "U8/clkdiv_28" BEL "U8/clkdiv_29" BEL "U8/clkdiv_30" BEL
+        "U8/clkdiv_31" BEL "Input_switch_btn/counter_0" BEL
+        "Input_switch_btn/counter_1" BEL "Input_switch_btn/counter_2" BEL
+        "Input_switch_btn/counter_3" BEL "Input_switch_btn/counter_4" BEL
+        "Input_switch_btn/counter_5" BEL "Input_switch_btn/counter_6" BEL
+        "Input_switch_btn/counter_7" BEL "Input_switch_btn/counter_8" BEL
+        "Input_switch_btn/counter_9" BEL "Input_switch_btn/counter_10" BEL
+        "Input_switch_btn/counter_11" BEL "Input_switch_btn/counter_12" BEL
+        "Input_switch_btn/counter_13" BEL "Input_switch_btn/counter_14" BEL
+        "Input_switch_btn/counter_15" BEL "Input_switch_btn/counter_16" BEL
+        "Input_switch_btn/counter_17" BEL "Input_switch_btn/counter_18" BEL
+        "Input_switch_btn/counter_19" BEL "Input_switch_btn/counter_20" BEL
+        "Input_switch_btn/counter_21" BEL "Input_switch_btn/counter_22" BEL
+        "Input_switch_btn/counter_23" BEL "Input_switch_btn/counter_24" BEL
+        "Input_switch_btn/counter_25" BEL "Input_switch_btn/counter_26" BEL
+        "Input_switch_btn/counter_27" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_0/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_1/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_2/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_3/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_4/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_5/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_6/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_7/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_8/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_9/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_10/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_11/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_12/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_13/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_14/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_15/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_16/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_17/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_btn_18/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_0/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_1/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_2/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_3/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_4/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_5/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_6/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_7/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_8/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_9/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_10/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_11/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_12/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_13/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_14/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_sw_15/counter_0" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_16" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_15" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_14" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_13" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_12" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_11" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_10" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_9" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_8" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_7" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_6" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_5" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_4" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_3" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_2" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_1" BEL
+        "Input_switch_btn/Santi_jitter/Aj_rst/counter_0" BEL
+        "Input_switch_btn/Btn_scan/state_FSM_FFd5" BEL
+        "Input_switch_btn/Btn_scan/state_FSM_FFd1" BEL
+        "Input_switch_btn/Btn_scan/state_FSM_FFd2" BEL
+        "Input_switch_btn/Btn_scan/state_FSM_FFd3" BEL
+        "Input_switch_btn/Btn_scan/state_FSM_FFd4" BEL
+        "Input_switch_btn/Btn_scan/btn_result_18" BEL
+        "Input_switch_btn/Btn_scan/btn_result_17" BEL
+        "Input_switch_btn/Btn_scan/btn_result_16" BEL
+        "Input_switch_btn/Btn_scan/btn_result_15" BEL
+        "Input_switch_btn/Btn_scan/btn_result_14" BEL
+        "Input_switch_btn/Btn_scan/btn_result_13" BEL
+        "Input_switch_btn/Btn_scan/btn_result_12" BEL
+        "Input_switch_btn/Btn_scan/btn_result_11" BEL
+        "Input_switch_btn/Btn_scan/btn_result_10" BEL
+        "Input_switch_btn/Btn_scan/btn_result_9" BEL
+        "Input_switch_btn/Btn_scan/btn_result_8" BEL
+        "Input_switch_btn/Btn_scan/btn_result_7" BEL
+        "Input_switch_btn/Btn_scan/btn_result_6" BEL
+        "Input_switch_btn/Btn_scan/btn_result_5" BEL
+        "Input_switch_btn/Btn_scan/btn_result_4" BEL
+        "Input_switch_btn/Btn_scan/btn_result_3" BEL
+        "Input_switch_btn/Btn_scan/btn_result_2" BEL
+        "Input_switch_btn/Btn_scan/btn_result_1" BEL
+        "Input_switch_btn/Btn_scan/btn_result_0" BEL "clk_100mhz_BUFGP/BUFG"
+        BEL "M4/readn" BEL "U6/M2/state_FSM_FFd1" BEL "U6/M2/state_FSM_FFd2"
+        BEL "U6/M2/start_1" BEL "U6/M2/start_0" BEL "U6/M2/s_clk" BEL
+        "U6/M2/EN" BEL "U6/M2/shift_count_4" BEL "U6/M2/shift_count_3" BEL
+        "U6/M2/shift_count_2" BEL "U6/M2/shift_count_1" BEL
+        "U6/M2/shift_count_0" BEL "U6/M2/shift_count_5" BEL "U6/M2/buffer_63"
+        BEL "U6/M2/buffer_62" BEL "U6/M2/buffer_61" BEL "U6/M2/buffer_60" BEL
+        "U6/M2/buffer_59" BEL "U6/M2/buffer_58" BEL "U6/M2/buffer_57" BEL
+        "U6/M2/buffer_56" BEL "U6/M2/buffer_55" BEL "U6/M2/buffer_54" BEL
+        "U6/M2/buffer_53" BEL "U6/M2/buffer_52" BEL "U6/M2/buffer_51" BEL
+        "U6/M2/buffer_50" BEL "U6/M2/buffer_49" BEL "U6/M2/buffer_48" BEL
+        "U6/M2/buffer_47" BEL "U6/M2/buffer_46" BEL "U6/M2/buffer_45" BEL
+        "U6/M2/buffer_44" BEL "U6/M2/buffer_43" BEL "U6/M2/buffer_42" BEL
+        "U6/M2/buffer_41" BEL "U6/M2/buffer_40" BEL "U6/M2/buffer_39" BEL
+        "U6/M2/buffer_38" BEL "U6/M2/buffer_37" BEL "U6/M2/buffer_36" BEL
+        "U6/M2/buffer_35" BEL "U6/M2/buffer_34" BEL "U6/M2/buffer_33" BEL
+        "U6/M2/buffer_32" BEL "U6/M2/buffer_31" BEL "U6/M2/buffer_30" BEL
+        "U6/M2/buffer_29" BEL "U6/M2/buffer_28" BEL "U6/M2/buffer_27" BEL
+        "U6/M2/buffer_26" BEL "U6/M2/buffer_25" BEL "U6/M2/buffer_24" BEL
+        "U6/M2/buffer_23" BEL "U6/M2/buffer_22" BEL "U6/M2/buffer_21" BEL
+        "U6/M2/buffer_20" BEL "U6/M2/buffer_19" BEL "U6/M2/buffer_18" BEL
+        "U6/M2/buffer_17" BEL "U6/M2/buffer_16" BEL "U6/M2/buffer_15" BEL
+        "U6/M2/buffer_14" BEL "U6/M2/buffer_13" BEL "U6/M2/buffer_12" BEL
+        "U6/M2/buffer_11" BEL "U6/M2/buffer_10" BEL "U6/M2/buffer_9" BEL
+        "U6/M2/buffer_8" BEL "U6/M2/buffer_7" BEL "U6/M2/buffer_6" BEL
+        "U6/M2/buffer_5" BEL "U6/M2/buffer_4" BEL "U6/M2/buffer_3" BEL
+        "U6/M2/buffer_2" BEL "U6/M2/buffer_1" BEL "U6/M2/buffer_0" BEL
+        "Mram_color8111/SP" BEL "Mram_color8111/DP" BEL "Mram_color8112/SP"
+        BEL "Mram_color8112/DP" BEL "Mram_color10_RAMA" BEL
+        "Mram_color10_RAMB" BEL "Mram_color10_RAMC" BEL "Mram_color10_RAMD"
+        BEL "Mram_color110_RAMA" BEL "Mram_color110_RAMB" BEL
+        "Mram_color110_RAMC" BEL "Mram_color110_RAMD" BEL "Mram_color111_RAMA"
+        BEL "Mram_color111_RAMB" BEL "Mram_color111_RAMC" BEL
+        "Mram_color111_RAMD" BEL "Mram_color21_RAMA" BEL "Mram_color21_RAMB"
+        BEL "Mram_color21_RAMC" BEL "Mram_color21_RAMD" BEL
+        "Mram_color22_RAMA" BEL "Mram_color22_RAMB" BEL "Mram_color22_RAMC"
+        BEL "Mram_color22_RAMD" BEL "Mram_color31_RAMA" BEL
+        "Mram_color31_RAMB" BEL "Mram_color31_RAMC" BEL "Mram_color31_RAMD"
+        BEL "Mram_color32_RAMA" BEL "Mram_color32_RAMB" BEL
+        "Mram_color32_RAMC" BEL "Mram_color32_RAMD" BEL "Mram_color41_RAMA"
+        BEL "Mram_color41_RAMB" BEL "Mram_color41_RAMC" BEL
+        "Mram_color41_RAMD" BEL "Mram_color42_RAMA" BEL "Mram_color42_RAMB"
+        BEL "Mram_color42_RAMC" BEL "Mram_color42_RAMD" BEL
+        "Mram_color51_RAMA" BEL "Mram_color51_RAMB" BEL "Mram_color51_RAMC"
+        BEL "Mram_color51_RAMD" BEL "Mram_color52_RAMA" BEL
+        "Mram_color52_RAMB" BEL "Mram_color52_RAMC" BEL "Mram_color52_RAMD"
+        BEL "Mram_color61_RAMA" BEL "Mram_color61_RAMB" BEL
+        "Mram_color61_RAMC" BEL "Mram_color61_RAMD" BEL "Mram_color62_RAMA"
+        BEL "Mram_color62_RAMB" BEL "Mram_color62_RAMC" BEL
+        "Mram_color62_RAMD" BEL "Mram_color71_RAMA" BEL "Mram_color71_RAMB"
+        BEL "Mram_color71_RAMC" BEL "Mram_color71_RAMD" BEL
+        "Mram_color72_RAMA" BEL "Mram_color72_RAMB" BEL "Mram_color72_RAMC"
+        BEL "Mram_color72_RAMD" BEL "Mram_color81_RAMA" BEL
+        "Mram_color81_RAMB" BEL "Mram_color81_RAMC" BEL "Mram_color81_RAMD"
+        BEL "Mram_color810_RAMA" BEL "Mram_color810_RAMB" BEL
+        "Mram_color810_RAMC" BEL "Mram_color810_RAMD" BEL "Mram_color82_RAMA"
+        BEL "Mram_color82_RAMB" BEL "Mram_color82_RAMC" BEL
+        "Mram_color82_RAMD" BEL "Mram_color83_RAMA" BEL "Mram_color83_RAMB"
+        BEL "Mram_color83_RAMC" BEL "Mram_color83_RAMD" BEL
+        "Mram_color84_RAMA" BEL "Mram_color84_RAMB" BEL "Mram_color84_RAMC"
+        BEL "Mram_color84_RAMD" BEL "Mram_color85_RAMA" BEL
+        "Mram_color85_RAMB" BEL "Mram_color85_RAMC" BEL "Mram_color85_RAMD"
+        BEL "Mram_color86_RAMA" BEL "Mram_color86_RAMB" BEL
+        "Mram_color86_RAMC" BEL "Mram_color86_RAMD" BEL "Mram_color87_RAMA"
+        BEL "Mram_color87_RAMB" BEL "Mram_color87_RAMC" BEL
+        "Mram_color87_RAMD" BEL "Mram_color88_RAMA" BEL "Mram_color88_RAMB"
+        BEL "Mram_color88_RAMC" BEL "Mram_color88_RAMD" BEL
+        "Mram_color89_RAMA" BEL "Mram_color89_RAMB" BEL "Mram_color89_RAMC"
+        BEL "Mram_color89_RAMD" BEL "Mram_color9_RAMA" BEL "Mram_color9_RAMB"
+        BEL "Mram_color9_RAMC" BEL "Mram_color9_RAMD" PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[1].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[2].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<63>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<62>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<65>"
+        PIN
+        "U3/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[3].ram.r/v6_noinit.ram/NO_BMM_INFO.SP.SIMPLE_PRIM36.ram_pins<64>";
+TS_CLK_100M = PERIOD TIMEGRP "TM_CLK" 10 ns HIGH 50%;
+SCHEMATIC END;
+

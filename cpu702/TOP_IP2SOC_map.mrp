@@ -1,0 +1,2452 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'TOP_IP2SOC'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc7k160t-ffg676-2L -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off
+-power off -o TOP_IP2SOC_map.ncd TOP_IP2SOC.ngd TOP_IP2SOC.pcf 
+Target Device  : xc7k160t
+Target Package : ffg676
+Target Speed   : -2l
+Mapper Version : kintex7 -- $Revision: 1.55 $
+Mapped Date    : Mon Jul 11 20:56:45 2022
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:   52
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,605 out of 202,800    1%
+    Number used as Flip Flops:               1,573
+    Number used as Latches:                     32
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                0
+  Number of Slice LUTs:                      5,294 out of 101,400    5%
+    Number used as logic:                    5,102 out of 101,400    5%
+      Number using O6 output only:           3,482
+      Number using O5 output only:             632
+      Number using O5 and O6:                  988
+      Number used as ROM:                        0
+    Number used as Memory:                     152 out of  35,000    1%
+      Number used as Dual Port RAM:            152
+        Number using O6 output only:           108
+        Number using O5 output only:             0
+        Number using O5 and O6:                 44
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:             0
+    Number used exclusively as route-thrus:     40
+      Number with same-slice register load:      1
+      Number with same-slice carry load:        39
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                 1,705 out of  25,350    6%
+  Number of LUT Flip Flop pairs used:        5,507
+    Number with an unused Flip Flop:         3,955 out of   5,507   71%
+    Number with an unused LUT:                 213 out of   5,507    3%
+    Number of fully used LUT-FF pairs:       1,339 out of   5,507   24%
+    Number of unique control sets:              64
+    Number of slice register sites lost
+      to control set restrictions:             351 out of 202,800    1%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+  OVERMAPPING of BRAM resources should be ignored if the design is
+  over-mapped for a non-BRAM resource or if placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        52 out of     400   13%
+    Number of LOCed IOBs:                       52 out of      52  100%
+
+Specific Feature Utilization:
+  Number of RAMB36E1/FIFO36E1s:                  4 out of     325    1%
+    Number using RAMB36E1 only:                  4
+    Number using FIFO36E1 only:                  0
+  Number of RAMB18E1/FIFO18E1s:                  0 out of     650    0%
+  Number of BUFG/BUFGCTRLs:                      6 out of      32   18%
+    Number used as BUFGs:                        6
+    Number used as BUFGCTRLs:                    0
+  Number of IDELAYE2/IDELAYE2_FINEDELAYs:        0 out of     400    0%
+  Number of ILOGICE2/ILOGICE3/ISERDESE2s:        0 out of     400    0%
+  Number of ODELAYE2/ODELAYE2_FINEDELAYs:        0 out of     150    0%
+  Number of OLOGICE2/OLOGICE3/OSERDESE2s:        0 out of     400    0%
+  Number of PHASER_IN/PHASER_IN_PHYs:            0 out of      32    0%
+  Number of PHASER_OUT/PHASER_OUT_PHYs:          0 out of      32    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHCEs:                             0 out of     120    0%
+  Number of BUFRs:                               0 out of      32    0%
+  Number of CAPTUREs:                            0 out of       1    0%
+  Number of DNA_PORTs:                           0 out of       1    0%
+  Number of DSP48E1s:                            0 out of     600    0%
+  Number of EFUSE_USRs:                          0 out of       1    0%
+  Number of FRAME_ECCs:                          0 out of       1    0%
+  Number of GTXE2_CHANNELs:                      0 out of       8    0%
+  Number of GTXE2_COMMONs:                       0 out of       2    0%
+  Number of IBUFDS_GTE2s:                        0 out of       4    0%
+  Number of ICAPs:                               0 out of       2    0%
+  Number of IDELAYCTRLs:                         0 out of       8    0%
+  Number of IN_FIFOs:                            0 out of      32    0%
+  Number of MMCME2_ADVs:                         0 out of       8    0%
+  Number of OUT_FIFOs:                           0 out of      32    0%
+  Number of PCIE_2_1s:                           0 out of       1    0%
+  Number of PHASER_REFs:                         0 out of       8    0%
+  Number of PHY_CONTROLs:                        0 out of       8    0%
+  Number of PLLE2_ADVs:                          0 out of       8    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of XADCs:                               0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                4.36
+
+Peak Memory Usage:  5198 MB
+Total REAL time to MAP completion:  1 mins 49 secs 
+Total CPU time to MAP completion:   1 mins 43 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:PhysDesignRules:367 - The signal <Mram_color81_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color88_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color810_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color87_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color89_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color82_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color86_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color83_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color32_RAMB_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color32_RAMC_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color32_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color110_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color31_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color62_RAMB_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color62_RAMC_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color62_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color61_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color85_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color84_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color21_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color9_RAMD_O> is incomplete. The
+   signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color10_RAMB_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color10_RAMC_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color10_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <U1/dp/rf/Mram_rf3_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <U1/dp/rf/Mram_rf12_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color51_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color41_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <U1/dp/rf/Mram_rf4_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <U1/dp/rf/Mram_rf13_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <U1/dp/rf/Mram_rf15_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <U1/dp/rf/Mram_rf6_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color22_RAMB_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color22_RAMC_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color22_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color111_RAMB_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color111_RAMC_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color111_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color72_RAMB_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color72_RAMC_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color72_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color42_RAMB_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color42_RAMC_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color42_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color71_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <U1/dp/rf/Mram_rf2_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <U1/dp/rf/Mram_rf11_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <U1/dp/rf/Mram_rf5_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <U1/dp/rf/Mram_rf14_RAMD_D1_O> is
+   incomplete. The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color52_RAMB_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color52_RAMC_DPO> is incomplete.
+   The signal does not drive any load pins in the design.
+WARNING:PhysDesignRules:367 - The signal <Mram_color52_RAMD_O> is incomplete.
+   The signal does not drive any load pins in the design.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network Mram_color8111/SPO has no load.
+INFO:LIT:395 - The above info message is repeated 35 more times for the
+   following (max. 5 shown):
+   Mram_color8112/SPO,
+   U1/dp/rf/Mram_rf161/SPO,
+   U1/dp/rf/Mram_rf72/SPO,
+   U1/dp/rf/Mram_rf162/SPO,
+   U1/dp/rf/Mram_rf71/SPO
+   To see the details of these info messages, please use the -detail switch.
+INFO:Pack:1716 - Initializing temperature to 100.000 Celsius. (default - Range:
+   0.000 to 100.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 0.970 Volts. (default - Range: 0.970 to
+   1.030 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 638 block(s) removed
+  19 block(s) optimized away
+ 638 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "M4/Ai<31>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT25" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<31>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_31" (FF) removed.
+The signal "M4/Ai<30>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT241" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<30>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_30_rstpot" (ROM) removed.
+    The signal "M4/Ai_30_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Ai_30" (FF) removed.
+The signal "M4/Ai<29>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT25_SW0" (ROM) removed.
+  The signal "M4/N10" is sourceless and has been removed.
+ Sourceless block "M4/Ai_29_rstpot" (ROM) removed.
+  The signal "M4/Ai_29_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_29" (FF) removed.
+The signal "M4/Ai<28>" is sourceless and has been removed.
+ Sourceless block "M4/Ai_28_rstpot" (ROM) removed.
+  The signal "M4/Ai_28_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_28" (FF) removed.
+The signal "M4/Ai<27>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT20" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<27>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_27" (FF) removed.
+The signal "M4/Ai<26>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT191" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<26>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_26_rstpot" (ROM) removed.
+    The signal "M4/Ai_26_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Ai_26" (FF) removed.
+The signal "M4/Ai<25>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT20_SW0" (ROM) removed.
+  The signal "M4/N8" is sourceless and has been removed.
+ Sourceless block "M4/Ai_25_rstpot" (ROM) removed.
+  The signal "M4/Ai_25_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_25" (FF) removed.
+The signal "M4/Ai<24>" is sourceless and has been removed.
+ Sourceless block "M4/Ai_24_rstpot" (ROM) removed.
+  The signal "M4/Ai_24_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_24" (FF) removed.
+The signal "M4/Ai<23>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT16" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<23>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_23" (FF) removed.
+The signal "M4/Ai<22>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT151" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<22>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_22_rstpot" (ROM) removed.
+    The signal "M4/Ai_22_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Ai_22" (FF) removed.
+The signal "M4/Ai<21>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT16_SW0" (ROM) removed.
+  The signal "M4/N6" is sourceless and has been removed.
+ Sourceless block "M4/Ai_21_rstpot" (ROM) removed.
+  The signal "M4/Ai_21_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_21" (FF) removed.
+The signal "M4/Ai<20>" is sourceless and has been removed.
+ Sourceless block "M4/Ai_20_rstpot" (ROM) removed.
+  The signal "M4/Ai_20_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_20" (FF) removed.
+The signal "M4/Ai<19>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT11" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<19>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_19" (FF) removed.
+The signal "M4/Ai<18>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT101" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<18>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_18_rstpot" (ROM) removed.
+    The signal "M4/Ai_18_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Ai_18" (FF) removed.
+The signal "M4/Ai<17>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT11_SW0" (ROM) removed.
+  The signal "M4/N4" is sourceless and has been removed.
+ Sourceless block "M4/Ai_17_rstpot" (ROM) removed.
+  The signal "M4/Ai_17_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_17" (FF) removed.
+The signal "M4/Ai<16>" is sourceless and has been removed.
+ Sourceless block "M4/Ai_16_rstpot" (ROM) removed.
+  The signal "M4/Ai_16_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_16" (FF) removed.
+The signal "M4/Ai<15>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT7" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<15>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_15" (FF) removed.
+The signal "M4/Ai<14>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT61" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<14>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_14_rstpot" (ROM) removed.
+    The signal "M4/Ai_14_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Ai_14" (FF) removed.
+The signal "M4/Ai<13>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT7_SW0" (ROM) removed.
+  The signal "M4/N2" is sourceless and has been removed.
+ Sourceless block "M4/Ai_13_rstpot" (ROM) removed.
+  The signal "M4/Ai_13_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_13" (FF) removed.
+The signal "M4/Ai<12>" is sourceless and has been removed.
+ Sourceless block "M4/Ai_12_rstpot" (ROM) removed.
+  The signal "M4/Ai_12_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_12" (FF) removed.
+The signal "M4/Ai<11>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT3" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<11>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_11" (FF) removed.
+The signal "M4/Ai<10>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT21" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<10>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_10_rstpot" (ROM) removed.
+    The signal "M4/Ai_10_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Ai_10" (FF) removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT3_SW0" (ROM) removed.
+  The signal "M4/N01" is sourceless and has been removed.
+The signal "M4/Ai<9>" is sourceless and has been removed.
+ Sourceless block "M4/Ai_9_rstpot" (ROM) removed.
+  The signal "M4/Ai_9_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_9" (FF) removed.
+The signal "M4/Ai<8>" is sourceless and has been removed.
+ Sourceless block "M4/Ai_8_rstpot" (ROM) removed.
+  The signal "M4/Ai_8_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_8" (FF) removed.
+The signal "M4/Ai<7>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT30" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<7>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_7" (FF) removed.
+The signal "M4/Ai<6>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT291" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<6>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_6_rstpot" (ROM) removed.
+    The signal "M4/Ai_6_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Ai_6" (FF) removed.
+The signal "M4/Ai<5>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT30_SW0" (ROM) removed.
+  The signal "M4/N14" is sourceless and has been removed.
+ Sourceless block "M4/Ai_5_rstpot" (ROM) removed.
+  The signal "M4/Ai_5_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_5" (FF) removed.
+The signal "M4/Ai<4>" is sourceless and has been removed.
+ Sourceless block "M4/Ai_4_rstpot" (ROM) removed.
+  The signal "M4/Ai_4_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_4" (FF) removed.
+The signal "M4/Ai<3>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT26" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<3>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_3" (FF) removed.
+The signal "M4/Ai<2>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT231" (ROM) removed.
+  The signal "M4/Ai[31]_Ai[31]_mux_48_OUT<2>" is sourceless and has been removed.
+   Sourceless block "M4/Ai_2_rstpot" (ROM) removed.
+    The signal "M4/Ai_2_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Ai_2" (FF) removed.
+The signal "M4/Ai<1>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Ai[31]_Ai[31]_mux_48_OUT26_SW0" (ROM) removed.
+  The signal "M4/N12" is sourceless and has been removed.
+ Sourceless block "M4/Ai_1_rstpot" (ROM) removed.
+  The signal "M4/Ai_1_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_1" (FF) removed.
+The signal "M4/Ai<0>" is sourceless and has been removed.
+ Sourceless block "M4/Ai_0_rstpot" (ROM) removed.
+  The signal "M4/Ai_0_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Ai_0" (FF) removed.
+The signal "M4/Bi<31>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT25" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<31>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_31" (FF) removed.
+The signal "M4/Bi<30>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT241" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<30>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_30_rstpot" (ROM) removed.
+    The signal "M4/Bi_30_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Bi_30" (FF) removed.
+The signal "M4/Bi<29>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT25_SW0" (ROM) removed.
+  The signal "M4/N26" is sourceless and has been removed.
+ Sourceless block "M4/Bi_29_rstpot" (ROM) removed.
+  The signal "M4/Bi_29_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_29" (FF) removed.
+The signal "M4/Bi<28>" is sourceless and has been removed.
+ Sourceless block "M4/Bi_28_rstpot" (ROM) removed.
+  The signal "M4/Bi_28_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_28" (FF) removed.
+The signal "M4/Bi<27>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT20" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<27>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_27" (FF) removed.
+The signal "M4/Bi<26>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT191" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<26>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_26_rstpot" (ROM) removed.
+    The signal "M4/Bi_26_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Bi_26" (FF) removed.
+The signal "M4/Bi<25>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT20_SW0" (ROM) removed.
+  The signal "M4/N24" is sourceless and has been removed.
+ Sourceless block "M4/Bi_25_rstpot" (ROM) removed.
+  The signal "M4/Bi_25_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_25" (FF) removed.
+The signal "M4/Bi<24>" is sourceless and has been removed.
+ Sourceless block "M4/Bi_24_rstpot" (ROM) removed.
+  The signal "M4/Bi_24_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_24" (FF) removed.
+The signal "M4/Bi<23>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT16" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<23>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_23" (FF) removed.
+The signal "M4/Bi<22>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT151" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<22>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_22_rstpot" (ROM) removed.
+    The signal "M4/Bi_22_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Bi_22" (FF) removed.
+The signal "M4/Bi<21>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT16_SW0" (ROM) removed.
+  The signal "M4/N22" is sourceless and has been removed.
+ Sourceless block "M4/Bi_21_rstpot" (ROM) removed.
+  The signal "M4/Bi_21_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_21" (FF) removed.
+The signal "M4/Bi<20>" is sourceless and has been removed.
+ Sourceless block "M4/Bi_20_rstpot" (ROM) removed.
+  The signal "M4/Bi_20_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_20" (FF) removed.
+The signal "M4/Bi<19>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT11" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<19>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_19" (FF) removed.
+The signal "M4/Bi<18>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT101" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<18>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_18_rstpot" (ROM) removed.
+    The signal "M4/Bi_18_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Bi_18" (FF) removed.
+The signal "M4/Bi<17>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT11_SW0" (ROM) removed.
+  The signal "M4/N20" is sourceless and has been removed.
+ Sourceless block "M4/Bi_17_rstpot" (ROM) removed.
+  The signal "M4/Bi_17_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_17" (FF) removed.
+The signal "M4/Bi<16>" is sourceless and has been removed.
+ Sourceless block "M4/Bi_16_rstpot" (ROM) removed.
+  The signal "M4/Bi_16_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_16" (FF) removed.
+The signal "M4/Bi<15>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT7" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<15>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_15" (FF) removed.
+The signal "M4/Bi<14>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT61" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<14>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_14_rstpot" (ROM) removed.
+    The signal "M4/Bi_14_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Bi_14" (FF) removed.
+The signal "M4/Bi<13>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT7_SW0" (ROM) removed.
+  The signal "M4/N18" is sourceless and has been removed.
+ Sourceless block "M4/Bi_13_rstpot" (ROM) removed.
+  The signal "M4/Bi_13_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_13" (FF) removed.
+The signal "M4/Bi<12>" is sourceless and has been removed.
+ Sourceless block "M4/Bi_12_rstpot" (ROM) removed.
+  The signal "M4/Bi_12_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_12" (FF) removed.
+The signal "M4/Bi<11>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT3" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<11>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_11" (FF) removed.
+The signal "M4/Bi<10>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT21" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<10>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_10_rstpot" (ROM) removed.
+    The signal "M4/Bi_10_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Bi_10" (FF) removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT3_SW0" (ROM) removed.
+  The signal "M4/N16" is sourceless and has been removed.
+The signal "M4/Bi<9>" is sourceless and has been removed.
+ Sourceless block "M4/Bi_9_rstpot" (ROM) removed.
+  The signal "M4/Bi_9_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_9" (FF) removed.
+The signal "M4/Bi<8>" is sourceless and has been removed.
+ Sourceless block "M4/Bi_8_rstpot" (ROM) removed.
+  The signal "M4/Bi_8_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_8" (FF) removed.
+The signal "M4/Bi<7>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT30" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<7>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_7" (FF) removed.
+The signal "M4/Bi<6>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT291" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<6>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_6_rstpot" (ROM) removed.
+    The signal "M4/Bi_6_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Bi_6" (FF) removed.
+The signal "M4/Bi<5>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT30_SW0" (ROM) removed.
+  The signal "M4/N30" is sourceless and has been removed.
+ Sourceless block "M4/Bi_5_rstpot" (ROM) removed.
+  The signal "M4/Bi_5_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_5" (FF) removed.
+The signal "M4/Bi<4>" is sourceless and has been removed.
+ Sourceless block "M4/Bi_4_rstpot" (ROM) removed.
+  The signal "M4/Bi_4_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_4" (FF) removed.
+The signal "M4/Bi<3>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT26" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<3>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_3" (FF) removed.
+The signal "M4/Bi<2>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT231" (ROM) removed.
+  The signal "M4/Bi[31]_Bi[31]_mux_49_OUT<2>" is sourceless and has been removed.
+   Sourceless block "M4/Bi_2_rstpot" (ROM) removed.
+    The signal "M4/Bi_2_rstpot" is sourceless and has been removed.
+     Sourceless block "M4/Bi_2" (FF) removed.
+The signal "M4/Bi<1>" is sourceless and has been removed.
+ Sourceless block "M4/Mmux_Bi[31]_Bi[31]_mux_49_OUT26_SW0" (ROM) removed.
+  The signal "M4/N28" is sourceless and has been removed.
+ Sourceless block "M4/Bi_1_rstpot" (ROM) removed.
+  The signal "M4/Bi_1_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_1" (FF) removed.
+The signal "M4/Bi<0>" is sourceless and has been removed.
+ Sourceless block "M4/Bi_0_rstpot" (ROM) removed.
+  The signal "M4/Bi_0_rstpot" is sourceless and has been removed.
+   Sourceless block "M4/Bi_0" (FF) removed.
+The signal "M4/blink<7>" is sourceless and has been removed.
+The signal "M4/blink<6>" is sourceless and has been removed.
+The signal "M4/blink<5>" is sourceless and has been removed.
+The signal "M4/blink<4>" is sourceless and has been removed.
+The signal "M4/blink<3>" is sourceless and has been removed.
+The signal "M4/blink<2>" is sourceless and has been removed.
+The signal "M4/blink<1>" is sourceless and has been removed.
+The signal "M4/blink<0>" is sourceless and has been removed.
+The signal "M4/get_B<0>" is sourceless and has been removed.
+ Sourceless block "M4/get_B_1" (FF) removed.
+  The signal "M4/get_B<1>" is sourceless and has been removed.
+   Sourceless block "M4/_n0187_inv12" (ROM) removed.
+    The signal "M4/_n0187_inv11" is sourceless and has been removed.
+     Sourceless block "M4/_n0187_inv13" (ROM) removed.
+      The signal "M4/_n0187_inv" is sourceless and has been removed.
+     Sourceless block "M4/_n0176_inv13" (ROM) removed.
+      The signal "M4/_n0176_inv" is sourceless and has been removed.
+     Sourceless block "M4/_n0187_inv13_1" (ROM) removed.
+      The signal "M4/_n0187_inv13" is sourceless and has been removed.
+     Sourceless block "M4/_n0176_inv13_1" (ROM) removed.
+      The signal "M4/_n0176_inv13" is sourceless and has been removed.
+The signal "M4/push" is sourceless and has been removed.
+ Sourceless block "M4/state_0" (FF) removed.
+  The signal "M4/state<0>" is sourceless and has been removed.
+   Sourceless block "M4/Result<2>1" (ROM) removed.
+    The signal "M4/Result<2>" is sourceless and has been removed.
+     Sourceless block "M4/state_2" (FF) removed.
+      The signal "M4/state<2>" is sourceless and has been removed.
+       Sourceless block "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT1101" (ROM) removed.
+        The signal "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT110" is sourceless and has
+been removed.
+       Sourceless block "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT2711" (ROM) removed.
+        The signal "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT271" is sourceless and has
+been removed.
+       Sourceless block "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT3111" (ROM) removed.
+        The signal "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT311" is sourceless and has
+been removed.
+       Sourceless block "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT411" (ROM) removed.
+        The signal "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT41" is sourceless and has
+been removed.
+       Sourceless block "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT811" (ROM) removed.
+        The signal "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT81" is sourceless and has
+been removed.
+       Sourceless block "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT1311" (ROM) removed.
+        The signal "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT131" is sourceless and has
+been removed.
+       Sourceless block "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT1711" (ROM) removed.
+        The signal "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT171" is sourceless and has
+been removed.
+       Sourceless block "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT2111" (ROM) removed.
+        The signal "M4/Mmux_state[2]_Ai[31]_wide_mux_26_OUT211" is sourceless and has
+been removed.
+       Sourceless block "M4/Mmux_blink81" (ROM) removed.
+       Sourceless block "M4/Mmux_blink71" (ROM) removed.
+       Sourceless block "M4/Mmux_blink61" (ROM) removed.
+       Sourceless block "M4/Mmux_blink51" (ROM) removed.
+       Sourceless block "M4/Mmux_blink41" (ROM) removed.
+       Sourceless block "M4/Mmux_blink31" (ROM) removed.
+       Sourceless block "M4/Mmux_blink21" (ROM) removed.
+       Sourceless block "M4/Mmux_blink11" (ROM) removed.
+   Sourceless block "M4/Result<1>1" (ROM) removed.
+    The signal "M4/Result<1>" is sourceless and has been removed.
+     Sourceless block "M4/state_1" (FF) removed.
+      The signal "M4/state<1>" is sourceless and has been removed.
+   Sourceless block "M4/Result<0>1_INV_0" (BUF) removed.
+    The signal "M4/Result<0>" is sourceless and has been removed.
+The signal "M4/n0001_inv" is sourceless and has been removed.
+The signal "M4/_n0187_inv1" is sourceless and has been removed.
+The signal "M4/_n0176_inv1" is sourceless and has been removed.
+The signal "U7/GPIOf0<13>" is sourceless and has been removed.
+The signal "U7/GPIOf0<12>" is sourceless and has been removed.
+The signal "U7/GPIOf0<11>" is sourceless and has been removed.
+The signal "U7/GPIOf0<10>" is sourceless and has been removed.
+The signal "U7/GPIOf0<9>" is sourceless and has been removed.
+The signal "U7/GPIOf0<8>" is sourceless and has been removed.
+The signal "U7/GPIOf0<7>" is sourceless and has been removed.
+The signal "U7/GPIOf0<6>" is sourceless and has been removed.
+The signal "U7/GPIOf0<5>" is sourceless and has been removed.
+The signal "U7/GPIOf0<4>" is sourceless and has been removed.
+The signal "U7/GPIOf0<3>" is sourceless and has been removed.
+The signal "U7/GPIOf0<2>" is sourceless and has been removed.
+The signal "U7/GPIOf0<1>" is sourceless and has been removed.
+The signal "U7/GPIOf0<0>" is sourceless and has been removed.
+The signal "U7/_n0029_inv" is sourceless and has been removed.
+ Sourceless block "U7/GPIOf0_0" (FF) removed.
+ Sourceless block "U7/GPIOf0_1" (FF) removed.
+ Sourceless block "U7/GPIOf0_2" (FF) removed.
+ Sourceless block "U7/GPIOf0_3" (FF) removed.
+ Sourceless block "U7/GPIOf0_4" (FF) removed.
+ Sourceless block "U7/GPIOf0_5" (FF) removed.
+ Sourceless block "U7/GPIOf0_6" (FF) removed.
+ Sourceless block "U7/GPIOf0_7" (FF) removed.
+ Sourceless block "U7/GPIOf0_8" (FF) removed.
+ Sourceless block "U7/GPIOf0_9" (FF) removed.
+ Sourceless block "U7/GPIOf0_10" (FF) removed.
+ Sourceless block "U7/GPIOf0_11" (FF) removed.
+ Sourceless block "U7/GPIOf0_12" (FF) removed.
+ Sourceless block "U7/GPIOf0_13" (FF) removed.
+The signal "U/Font_8/spo<8>" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321310_SW0"
+(MUX) removed.
+  The signal "U/Font_8/N73" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321310"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int32139" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321328"
+(ROM) removed.
+      The signal "U/Font_8/spo<2>" is sourceless and has been removed.
+The signal "U/Font_8/spo<7>" is sourceless and has been removed.
+The signal "U/Font_8/spo<6>" is sourceless and has been removed.
+The signal "U/Font_8/spo<5>" is sourceless and has been removed.
+The signal "U/Font_8/spo<4>" is sourceless and has been removed.
+The signal "U/Font_8/spo<3>" is sourceless and has been removed.
+The signal "U/Font_8/spo<1>" is sourceless and has been removed.
+The signal "U/Font_8/spo<0>" is sourceless and has been removed.
+The signal "U/Font_8/N274" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF32671" (ROM) removed.
+  The signal "U/Font_8/SF3267" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF32611" (ROM) removed.
+    The signal "U/Font_8/SF326" is sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741319_SW0"
+(ROM) removed.
+      The signal "U/Font_8/N191" is sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741319"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741318" is
+sourceless and has been removed.
+         Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741320"
+(ROM) removed.
+          The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741319" is
+sourceless and has been removed.
+           Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741336"
+(ROM) removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741317_SW0"
+(ROM) removed.
+      The signal "U/Font_8/N51" is sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741317"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741316" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int74139" (ROM)
+removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int74138" is
+sourceless and has been removed.
+The signal "U/Font_8/N275" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int74137" (MUX)
+removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int74136" is
+sourceless and has been removed.
+The signal "U/Font_8/N253" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF3763" (MUX) removed.
+  The signal "U/Font_8/SF376" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881314_SW0"
+(ROM) removed.
+    The signal "U/Font_8/N87" is sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881314"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881313" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881318"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881317" is
+sourceless and has been removed.
+         Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881332"
+(ROM) removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881317"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881316" is
+sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881316"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881315" is
+sourceless and has been removed.
+The signal "U/Font_8/N251" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF32610" (MUX) removed.
+  The signal "U/Font_8/SF32610" is sourceless and has been removed.
+The signal "U/Font_8/N229" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF943" (MUX) removed.
+  The signal "U/Font_8/SF94" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321319"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321318" is
+sourceless and has been removed.
+The signal "U/Font_8/N213" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF190" (MUX) removed.
+  The signal "U/Font_8/SF190" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461348_SW0"
+(ROM) removed.
+    The signal "U/Font_8/N49" is sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461348"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461347" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461349"
+(ROM) removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461343"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461342" is
+sourceless and has been removed.
+The signal "U/Font_8/N288" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461315"
+(MUX) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461314" is
+sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461321"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461320" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461337"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461336" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int39" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461315_F"
+(ROM) removed.
+  The signal "U/Font_8/N287" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461320"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461319" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461318"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461317" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int10" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF4511_G" (ROM) removed.
+  The signal "U/Font_8/N286" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF4511" (MUX) removed.
+    The signal "U/Font_8/SF4511" is sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int18139" (ROM)
+removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int18138" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181346"
+(ROM) removed.
+     Sourceless block "U/Font_8/SF4526" (ROM) removed.
+      The signal "U/Font_8/SF45" is sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int18136_SW1"
+(ROM) removed.
+        The signal "U/Font_8/N177" is sourceless and has been removed.
+         Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int18136" (ROM)
+removed.
+          The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int18135" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int18138" (ROM)
+removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int18137" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF4524" (ROM) removed.
+  The signal "U/Font_8/SF4524" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF4525" (ROM) removed.
+    The signal "U/Font_8/SF4525" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF41" (ROM) removed.
+  The signal "U/Font_8/SF41" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF4517" (ROM) removed.
+  The signal "U/Font_8/SF4517" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF4514" (ROM) removed.
+  The signal "U/Font_8/SF4514" is sourceless and has been removed.
+The signal "U/Font_8/N285" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int80" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF41414_G" (ROM) removed.
+  The signal "U/Font_8/N284" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF41414" (MUX) removed.
+    The signal "U/Font_8/SF41414" is sourceless and has been removed.
+     Sourceless block "U/Font_8/SF41415" (ROM) removed.
+      The signal "U/Font_8/SF414" is sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int88131" (ROM)
+removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int8813" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF4147" (ROM) removed.
+  The signal "U/Font_8/SF4147" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF4148" (ROM) removed.
+    The signal "U/Font_8/SF4148" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF4142" (ROM) removed.
+  The signal "U/Font_8/SF4142" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF41410" (ROM) removed.
+  The signal "U/Font_8/SF41410" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF4144" (ROM) removed.
+  The signal "U/Font_8/SF4144" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF4145" (ROM) removed.
+  The signal "U/Font_8/SF4145" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF4001" (ROM) removed.
+  The signal "U/Font_8/SF400" is sourceless and has been removed.
+The signal "U/Font_8/N283" is sourceless and has been removed.
+The signal "U/Font_8/N282" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881323"
+(MUX) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881322" is
+sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881331"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881330" is
+sourceless and has been removed.
+The signal "U/Font_8/N281" is sourceless and has been removed.
+The signal "U/Font_8/N280" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF2546" (MUX) removed.
+  The signal "U/Font_8/SF2546" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60131" (ROM)
+removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int6013" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601322"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601321" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601368"
+(ROM) removed.
+   Sourceless block "U/Font_8/SF25412" (ROM) removed.
+    The signal "U/Font_8/SF254" is sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int6013181"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601317" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601321"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601320" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601320"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601319" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601312"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601311" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60139" (ROM)
+removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601312" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60138" (ROM)
+removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60137" is
+sourceless and has been removed.
+The signal "U/Font_8/N279" is sourceless and has been removed.
+The signal "U/Font_8/N278" is sourceless and has been removed.
+The signal "U/Font_8/N276" is sourceless and has been removed.
+The signal "U/Font_8/N272" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF19210" (MUX) removed.
+  The signal "U/Font_8/SF19210" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF19211" (ROM) removed.
+    The signal "U/Font_8/SF192" is sourceless and has been removed.
+The signal "U/Font_8/N271" is sourceless and has been removed.
+The signal "U/Font_8/N179" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF28016_SW0_G" (ROM) removed.
+  The signal "U/Font_8/N270" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF28016_SW0" (MUX) removed.
+    The signal "U/Font_8/N159" is sourceless and has been removed.
+     Sourceless block "U/Font_8/SF28016" (ROM) removed.
+      The signal "U/Font_8/SF280" is sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601366"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601365" is
+sourceless and has been removed.
+         Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601367"
+(ROM) removed.
+          The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601366" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601360"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601359" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601354"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601353" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601347"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601346" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF28016_SW0_F" (ROM) removed.
+  The signal "U/Font_8/N269" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int57" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF28010_F" (ROM) removed.
+  The signal "U/Font_8/N215" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF28010" (MUX) removed.
+    The signal "U/Font_8/SF28010" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF274_F" (ROM) removed.
+  The signal "U/Font_8/N211" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF274" (MUX) removed.
+    The signal "U/Font_8/SF274" is sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601359"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601358" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601358"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601357" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601357"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601356" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601356"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601355" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF28016_SW0_SW0" (ROM) removed.
+ Sourceless block "U/Font_8/SF28014" (ROM) removed.
+  The signal "U/Font_8/SF28014" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601349"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601348" is
+sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601353"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601352" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601355"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601354" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601352"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601351" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF2761" (ROM) removed.
+  The signal "U/Font_8/SF276" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF2711" (ROM) removed.
+  The signal "U/Font_8/SF271" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF2691" (ROM) removed.
+  The signal "U/Font_8/SF269" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF274_G" (ROM) removed.
+    The signal "U/Font_8/N212" is sourceless and has been removed.
+The signal "U/Font_8/N268" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF1925" (MUX) removed.
+  The signal "U/Font_8/SF1925" is sourceless and has been removed.
+The signal "U/Font_8/N267" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int28" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF17410_G" (ROM) removed.
+  The signal "U/Font_8/N266" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF17410" (MUX) removed.
+    The signal "U/Font_8/SF17410" is sourceless and has been removed.
+     Sourceless block "U/Font_8/SF17427" (ROM) removed.
+      The signal "U/Font_8/SF174" is sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321312"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321311" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321311"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321310" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF17426_G" (ROM) removed.
+  The signal "U/Font_8/N260" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF17426" (MUX) removed.
+    The signal "U/Font_8/SF17426" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF17425_F" (ROM) removed.
+  The signal "U/Font_8/N255" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF17425" (MUX) removed.
+    The signal "U/Font_8/SF17425" is sourceless and has been removed.
+     Sourceless block "U/Font_8/SF17426_F" (ROM) removed.
+      The signal "U/Font_8/N259" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF1746" (ROM) removed.
+  The signal "U/Font_8/SF1746" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF174181" (ROM) removed.
+  The signal "U/Font_8/SF17418" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF1581" (ROM) removed.
+  The signal "U/Font_8/SF158" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF17410_F" (ROM) removed.
+    The signal "U/Font_8/N265" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int32" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF17425_G" (ROM) removed.
+  The signal "U/Font_8/N256" is sourceless and has been removed.
+The signal "U/Font_8/N264" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF2523" (MUX) removed.
+  The signal "U/Font_8/SF252" is sourceless and has been removed.
+The signal "U/Font_8/N263" is sourceless and has been removed.
+The signal "U/Font_8/N262" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int74135" (MUX)
+removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int74134" is
+sourceless and has been removed.
+The signal "U/Font_8/N65" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int74135_F"
+(ROM) removed.
+  The signal "U/Font_8/N261" is sourceless and has been removed.
+The signal "U/Font_8/SF17420" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601341" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601345_G"
+(ROM) removed.
+  The signal "U/Font_8/N258" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601345"
+(MUX) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601344" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601346"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601345" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601345_F"
+(ROM) removed.
+  The signal "U/Font_8/N257" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int56" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601337_G"
+(ROM) removed.
+  The signal "U/Font_8/N242" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601337"
+(MUX) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601336" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601340"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601339" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601333"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601332" is
+sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601334"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601333" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601324"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601323" is
+sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601327"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601326" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF2891" (ROM) removed.
+  The signal "U/Font_8/SF289" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601342"
+(ROM) removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601341"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601340" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF2841" (ROM) removed.
+  The signal "U/Font_8/SF284" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601330"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601329" is
+sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601336"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601335" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601337_F"
+(ROM) removed.
+      The signal "U/Font_8/N241" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int54" is
+sourceless and has been removed.
+The signal "U/Font_8/N254" is sourceless and has been removed.
+The signal "U/Font_8/N252" is sourceless and has been removed.
+The signal "U/Font_8/N249" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF2549" (MUX) removed.
+  The signal "U/Font_8/SF2549" is sourceless and has been removed.
+The signal "U/Font_8/N2" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF2205" (MUX) removed.
+  The signal "U/Font_8/SF220" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461334_SW0"
+(ROM) removed.
+    The signal "U/Font_8/N47" is sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461334"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461333" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461336"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461335" is
+sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461335"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461334" is
+sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461327"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461326" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int74" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF36733_G" (ROM) removed.
+  The signal "U/Font_8/N248" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF36733" (MUX) removed.
+    The signal "U/Font_8/SF36733" is sourceless and has been removed.
+     Sourceless block "U/Font_8/SF36734" (ROM) removed.
+      The signal "U/Font_8/SF367" is sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741335_SW1"
+(ROM) removed.
+        The signal "U/Font_8/N185" is sourceless and has been removed.
+         Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741335"
+(ROM) removed.
+          The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741334" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741329"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741328" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF36718_G" (ROM) removed.
+  The signal "U/Font_8/N238" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF36718" (MUX) removed.
+    The signal "U/Font_8/SF36718" is sourceless and has been removed.
+     Sourceless block "U/Font_8/SF36719" (ROM) removed.
+      The signal "U/Font_8/SF36719" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF3674" (ROM) removed.
+  The signal "U/Font_8/SF3674" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF36710" (ROM) removed.
+    The signal "U/Font_8/SF36710" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF3677_SW0" (ROM) removed.
+  The signal "U/Font_8/N153" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF3677" (ROM) removed.
+    The signal "U/Font_8/SF3677" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF363" (ROM) removed.
+  The signal "U/Font_8/SF363" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF36721" (ROM) removed.
+  The signal "U/Font_8/SF36721" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF36732_G" (ROM) removed.
+    The signal "U/Font_8/N208" is sourceless and has been removed.
+     Sourceless block "U/Font_8/SF36732" (MUX) removed.
+      The signal "U/Font_8/SF36732" is sourceless and has been removed.
+       Sourceless block "U/Font_8/SF36733_F" (ROM) removed.
+        The signal "U/Font_8/N247" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF36732_F" (ROM) removed.
+    The signal "U/Font_8/N207" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF36723" (ROM) removed.
+    The signal "U/Font_8/SF36723" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF3672" (ROM) removed.
+  The signal "U/Font_8/SF3672" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF344" (ROM) removed.
+  The signal "U/Font_8/SF344" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF3601" (ROM) removed.
+  The signal "U/Font_8/SF360" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF36713" (ROM) removed.
+    The signal "U/Font_8/SF36713" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF36712" (ROM) removed.
+    The signal "U/Font_8/SF36712" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF3551" (ROM) removed.
+  The signal "U/Font_8/SF355" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF36718_F" (ROM) removed.
+    The signal "U/Font_8/N237" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF3679" (ROM) removed.
+    The signal "U/Font_8/SF3679" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF3461" (ROM) removed.
+  The signal "U/Font_8/SF346" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int70" is
+sourceless and has been removed.
+The signal "U/Font_8/SF36724" is sourceless and has been removed.
+The signal "U/Font_8/N246" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF3314" (MUX) removed.
+  The signal "U/Font_8/SF331" is sourceless and has been removed.
+The signal "U/Font_8/N245" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int11" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF726_G" (ROM) removed.
+  The signal "U/Font_8/N244" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF726" (MUX) removed.
+    The signal "U/Font_8/SF726" is sourceless and has been removed.
+     Sourceless block "U/Font_8/SF7212" (ROM) removed.
+      The signal "U/Font_8/SF72" is sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181344_SW1"
+(ROM) removed.
+        The signal "U/Font_8/N189" is sourceless and has been removed.
+         Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181344"
+(ROM) removed.
+          The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181343" is
+sourceless and has been removed.
+           Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181345"
+(ROM) removed.
+            The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181344" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181337"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181336" is
+sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181328"
+(ROM) removed.
+        The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181327" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF726_F" (ROM) removed.
+  The signal "U/Font_8/N243" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF723_G" (ROM) removed.
+  The signal "U/Font_8/N236" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF723" (MUX) removed.
+    The signal "U/Font_8/SF723" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF723_F" (ROM) removed.
+  The signal "U/Font_8/N235" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF7211_F" (ROM) removed.
+  The signal "U/Font_8/N231" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF7211" (MUX) removed.
+    The signal "U/Font_8/SF7211" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF53_F" (ROM) removed.
+  The signal "U/Font_8/N205" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF53" (MUX) removed.
+    The signal "U/Font_8/SF53" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181337_SW0"
+(ROM) removed.
+  The signal "U/Font_8/N119" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181331"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181330" is
+sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181334"
+(ROM) removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181333" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF52" (ROM) removed.
+  The signal "U/Font_8/SF52" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181333"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181332" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF661" (ROM) removed.
+  The signal "U/Font_8/SF66" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF729" (ROM) removed.
+    The signal "U/Font_8/SF729" is sourceless and has been removed.
+     Sourceless block "U/Font_8/SF7211_G" (ROM) removed.
+      The signal "U/Font_8/N232" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF541" (ROM) removed.
+  The signal "U/Font_8/SF54" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF471" (ROM) removed.
+  The signal "U/Font_8/SF47" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF53_G" (ROM) removed.
+    The signal "U/Font_8/N206" is sourceless and has been removed.
+The signal "U/Font_8/N240" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int32134" (MUX)
+removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int32133" is
+sourceless and has been removed.
+The signal "U/Font_8/N239" is sourceless and has been removed.
+The signal "U/Font_8/N234" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF45217" (MUX) removed.
+  The signal "U/Font_8/SF45216" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF45223" (ROM) removed.
+    The signal "U/Font_8/SF452" is sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881324"
+(ROM) removed.
+      The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881323" is
+sourceless and has been removed.
+The signal "U/Font_8/N233" is sourceless and has been removed.
+The signal "U/Font_8/N230" is sourceless and has been removed.
+The signal "U/Font_8/N227" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int97131" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int97136_G"
+(ROM) removed.
+  The signal "U/Font_8/N226" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int97136" (MUX)
+removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int97135" is
+sourceless and has been removed.
+     Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int971316_G"
+(ROM) removed.
+      The signal "U/Font_8/N222" is sourceless and has been removed.
+       Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int971316"
+(MUX) removed.
+The signal "U/Font_8/N225" is sourceless and has been removed.
+The signal "U/Font_8/SF1265" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF12614_G" (ROM) removed.
+  The signal "U/Font_8/N224" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF12614" (MUX) removed.
+    The signal "U/Font_8/SF126" is sourceless and has been removed.
+The signal "U/Font_8/SF1266" is sourceless and has been removed.
+The signal "U/Font_8/SF12610" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF12614_F" (ROM) removed.
+  The signal "U/Font_8/N223" is sourceless and has been removed.
+The signal "U/Font_8/SF12612" is sourceless and has been removed.
+The signal "U/Font_8/SF112" is sourceless and has been removed.
+The signal "U/Font_8/SF1268" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int9713" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int97137" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int971316_F"
+(ROM) removed.
+  The signal "U/Font_8/N221" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int97138" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int971313" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4122" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4128_G"
+(ROM) removed.
+  The signal "U/Font_8/N220" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4128" (MUX)
+removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4123" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4125" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4128_F"
+(ROM) removed.
+  The signal "U/Font_8/N219" is sourceless and has been removed.
+The signal "U/Font_8/N218" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF45211" (MUX) removed.
+  The signal "U/Font_8/SF45210" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF45212" (ROM) removed.
+    The signal "U/Font_8/SF45211" is sourceless and has been removed.
+The signal "U/Font_8/N217" is sourceless and has been removed.
+The signal "U/Font_8/SF261" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF28010_G" (ROM) removed.
+  The signal "U/Font_8/N216" is sourceless and has been removed.
+The signal "U/Font_8/N214" is sourceless and has been removed.
+The signal "U/Font_8/SF308" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF310_G" (ROM) removed.
+  The signal "U/Font_8/N210" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF310" (MUX) removed.
+    The signal "U/Font_8/SF310" is sourceless and has been removed.
+The signal "U/Font_8/N209" is sourceless and has been removed.
+The signal "U/Font_8/N204" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461326"
+(MUX) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461325" is
+sourceless and has been removed.
+The signal "U/Font_8/N203" is sourceless and has been removed.
+The signal "U/Font_8/N181" is sourceless and has been removed.
+The signal "U/Font_8/SF187" is sourceless and has been removed.
+The signal "U/Font_8/N201" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321319_SW1"
+(ROM) removed.
+  The signal "U/Font_8/N187" is sourceless and has been removed.
+The signal "U/Font_8/N59" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601350" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321325" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321327"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321326" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741324" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741328"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741327" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int88134" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881311"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881310" is
+sourceless and has been removed.
+The signal "U/Font_8/SF1525" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF15211" (ROM) removed.
+  The signal "U/Font_8/SF152" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int32135" (ROM)
+removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int32134" is
+sourceless and has been removed.
+The signal "U/Font_8/N175" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181327"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181326" is
+sourceless and has been removed.
+The signal "U/Font_8/N165" is sourceless and has been removed.
+The signal "U/Font_8/N197" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int88137" is
+sourceless and has been removed.
+The signal "U/Font_8/N193" is sourceless and has been removed.
+The signal "U/Font_8/SF423" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF4398" (ROM) removed.
+  The signal "U/Font_8/SF4398" is sourceless and has been removed.
+   Sourceless block "U/Font_8/SF4399" (ROM) removed.
+    The signal "U/Font_8/SF439" is sourceless and has been removed.
+The signal "U/Font_8/N71" is sourceless and has been removed.
+The signal "U/Font_8/N21" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF223" (ROM) removed.
+  The signal "U/Font_8/SF223" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601318" is
+sourceless and has been removed.
+The signal "U/Font_8/N125" is sourceless and has been removed.
+The signal "U/Font_8/N97" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881310"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int88139" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181339" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601314" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601310" is
+sourceless and has been removed.
+The signal "U/Font_8/N109" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741311" is
+sourceless and has been removed.
+The signal "U/Font_8/SF81" is sourceless and has been removed.
+The signal "U/Font_8/SF428" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int88132" is
+sourceless and has been removed.
+The signal "U/Font_8/SF10" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int18137" (ROM)
+removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int18136" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181311" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181319" is
+sourceless and has been removed.
+The signal "U/Font_8/SF74" is sourceless and has been removed.
+The signal "U/Font_8/N173" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF815" (ROM) removed.
+The signal "U/Font_8/N171" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF4393" (ROM) removed.
+  The signal "U/Font_8/SF4393" is sourceless and has been removed.
+The signal "U/Font_8/N93" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF25411" (ROM) removed.
+  The signal "U/Font_8/SF25411" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46138" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461310"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46139" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int40" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46139" (ROM)
+removed.
+ Sourceless block "U/Font_8/SF2031" (ROM) removed.
+  The signal "U/Font_8/SF203" is sourceless and has been removed.
+   Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46135" (ROM)
+removed.
+    The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46134" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46134" (ROM)
+removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46133" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46132" (ROM)
+removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46131" is
+sourceless and has been removed.
+ Sourceless block "U/Font_8/SF2041" (ROM) removed.
+  The signal "U/Font_8/SF204" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46135" is
+sourceless and has been removed.
+The signal "U/Font_8/N95" is sourceless and has been removed.
+The signal "U/Font_8/N105" is sourceless and has been removed.
+The signal "U/Font_8/SF4394" is sourceless and has been removed.
+The signal "U/Font_8/SF6" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int18132" (ROM)
+removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int18131" is
+sourceless and has been removed.
+The signal "U/Font_8/SF150" is sourceless and has been removed.
+The signal "U/Font_8/SF1528" is sourceless and has been removed.
+The signal "U/Font_8/SF1522" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321320" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741322" is
+sourceless and has been removed.
+The signal "U/Font_8/N161" is sourceless and has been removed.
+The signal "U/Font_8/SF45221" is sourceless and has been removed.
+The signal "U/Font_8/SF3673" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601347" is
+sourceless and has been removed.
+The signal "U/Font_8/SF244" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60137" (ROM)
+removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601313" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60136" (ROM)
+removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60135" is
+sourceless and has been removed.
+The signal "U/Font_8/SF116" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF1265" (ROM) removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int1813" is
+sourceless and has been removed.
+The signal "U/Font_8/N149" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4123" (ROM)
+removed.
+The signal "U/Font_8/N141" is sourceless and has been removed.
+The signal "U/Font_8/SF1264" is sourceless and has been removed.
+The signal "U/Font_8/N133" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181312"
+(ROM) removed.
+The signal "U/Font_8/N127" is sourceless and has been removed.
+The signal "U/Font_8/N121" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int97139" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int971314"
+(ROM) removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int971310" is
+sourceless and has been removed.
+The signal "U/Font_8/N117" is sourceless and has been removed.
+The signal "U/Font_8/N101" is sourceless and has been removed.
+The signal "U/Font_8/SF372" is sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881315"
+(ROM) removed.
+  The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881314" is
+sourceless and has been removed.
+The signal "U/Font_8/SF371" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461315" is
+sourceless and has been removed.
+The signal "U/Font_8/SF119" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321323" is
+sourceless and has been removed.
+The signal "U/Font_8/N77" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461328" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181312" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181320"
+(ROM) removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181314" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181313" is
+sourceless and has been removed.
+The signal "U/Font_8/N69" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321322" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741326" is
+sourceless and has been removed.
+The signal "U/Font_8/SF15210" is sourceless and has been removed.
+The signal "U/Font_8/SF4526" is sourceless and has been removed.
+The signal "U/Font_8/SF4527" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741329" is
+sourceless and has been removed.
+The signal "U/Font_8/SF36720" is sourceless and has been removed.
+The signal "U/Font_8/SF36722" is sourceless and has been removed.
+The signal "U/Font_8/SF36711" is sourceless and has been removed.
+The signal "U/Font_8/SF3671" is sourceless and has been removed.
+The signal "U/Font_8/N35" is sourceless and has been removed.
+The signal "U/Font_8/SF3264" is sourceless and has been removed.
+The signal "U/Font_8/SF3262" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF3264" (ROM) removed.
+The signal "U/Font_8/SF3261" is sourceless and has been removed.
+The signal "U/Font_8/SF3263" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601349" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601322" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60134" is
+sourceless and has been removed.
+The signal "U/Font_8/SF243" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60132" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60135" (ROM)
+removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60131" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60133" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461341" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461337" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461342"
+(ROM) removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461338" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461340" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461339" is
+sourceless and has been removed.
+ Sourceless block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461341"
+(ROM) removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46132" is
+sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4613" is
+sourceless and has been removed.
+The signal "U/Font_8/SF1262" is sourceless and has been removed.
+The signal "U/Font_8/SF114" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF1262" (ROM) removed.
+The signal "U/Font_8/SF1261" is sourceless and has been removed.
+The signal
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181331" is
+sourceless and has been removed.
+The signal "U/Font_8/N13" is sourceless and has been removed.
+ Sourceless block "U/Font_8/SF74" (ROM) removed.
+The signal "U/Font_8/N12" is sourceless and has been removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "vy<2>" is unused and has been removed.
+ Unused block "U/VScans/Msub_row_xor<2>11_INV_0" (BUF) removed.
+Unused block "M4/_n0176_inv11" (ROM) removed.
+Unused block "M4/_n0187_inv11" (ROM) removed.
+Unused block "M4/get_B_0" (FF) removed.
+Unused block "M4/n0001_inv1" (ROM) removed.
+Unused block "M4/push1" (ROM) removed.
+Unused block "U/Font_8/SF10" (ROM) removed.
+Unused block "U/Font_8/SF1121" (ROM) removed.
+Unused block "U/Font_8/SF1141" (ROM) removed.
+Unused block "U/Font_8/SF1161" (ROM) removed.
+Unused block "U/Font_8/SF1191" (ROM) removed.
+Unused block "U/Font_8/SF1261" (ROM) removed.
+Unused block "U/Font_8/SF12610" (ROM) removed.
+Unused block "U/Font_8/SF12612" (ROM) removed.
+Unused block "U/Font_8/SF1264" (ROM) removed.
+Unused block "U/Font_8/SF1266" (ROM) removed.
+Unused block "U/Font_8/SF1268" (ROM) removed.
+Unused block "U/Font_8/SF150" (ROM) removed.
+Unused block "U/Font_8/SF15210" (ROM) removed.
+Unused block "U/Font_8/SF1522" (ROM) removed.
+Unused block "U/Font_8/SF1525" (ROM) removed.
+Unused block "U/Font_8/SF1528" (ROM) removed.
+Unused block "U/Font_8/SF174181_SW0" (ROM) removed.
+Unused block "U/Font_8/SF17420" (ROM) removed.
+Unused block "U/Font_8/SF1746_SW0" (ROM) removed.
+Unused block "U/Font_8/SF183" (ROM) removed.
+Unused block "U/Font_8/SF190_F_INV_0" (BUF) removed.
+Unused block "U/Font_8/SF190_G" (ROM) removed.
+Unused block "U/Font_8/SF19210_F" (ROM) removed.
+Unused block "U/Font_8/SF19210_G" (ROM) removed.
+Unused block "U/Font_8/SF1925_F" (ROM) removed.
+Unused block "U/Font_8/SF1925_G" (ROM) removed.
+Unused block "U/Font_8/SF2205_F" (ROM) removed.
+Unused block "U/Font_8/SF223_SW0" (ROM) removed.
+Unused block "U/Font_8/SF2431" (ROM) removed.
+Unused block "U/Font_8/SF244" (ROM) removed.
+Unused block "U/Font_8/SF2523_F" (ROM) removed.
+Unused block "U/Font_8/SF2523_G" (ROM) removed.
+Unused block "U/Font_8/SF25411_SW0" (ROM) removed.
+Unused block "U/Font_8/SF2546_F" (ROM) removed.
+Unused block "U/Font_8/SF2546_G" (ROM) removed.
+Unused block "U/Font_8/SF2549_F" (ROM) removed.
+Unused block "U/Font_8/SF2611" (ROM) removed.
+Unused block "U/Font_8/SF28014_SW1" (ROM) removed.
+Unused block "U/Font_8/SF3081" (ROM) removed.
+Unused block "U/Font_8/SF310_F" (ROM) removed.
+Unused block "U/Font_8/SF3261" (ROM) removed.
+Unused block "U/Font_8/SF32610_F_INV_0" (BUF) removed.
+Unused block "U/Font_8/SF32610_G" (ROM) removed.
+Unused block "U/Font_8/SF3262" (ROM) removed.
+Unused block "U/Font_8/SF3263" (ROM) removed.
+Unused block "U/Font_8/SF3267_G" (ROM) removed.
+Unused block "U/Font_8/SF3314_F" (ROM) removed.
+Unused block "U/Font_8/SF3314_G" (ROM) removed.
+Unused block "U/Font_8/SF344_SW0" (ROM) removed.
+Unused block "U/Font_8/SF363_SW1" (ROM) removed.
+Unused block "U/Font_8/SF3671" (ROM) removed.
+Unused block "U/Font_8/SF36711" (ROM) removed.
+Unused block "U/Font_8/SF36720" (ROM) removed.
+Unused block "U/Font_8/SF36722" (ROM) removed.
+Unused block "U/Font_8/SF36724" (ROM) removed.
+Unused block "U/Font_8/SF3673" (ROM) removed.
+Unused block "U/Font_8/SF3711" (ROM) removed.
+Unused block "U/Font_8/SF372" (ROM) removed.
+Unused block "U/Font_8/SF3763_F_INV_0" (BUF) removed.
+Unused block "U/Font_8/SF3763_G" (ROM) removed.
+Unused block "U/Font_8/SF41414_F" (ROM) removed.
+Unused block "U/Font_8/SF4231" (ROM) removed.
+Unused block "U/Font_8/SF4281" (ROM) removed.
+Unused block "U/Font_8/SF4393_SW0" (ROM) removed.
+Unused block "U/Font_8/SF4394" (ROM) removed.
+Unused block "U/Font_8/SF4398_SW0" (ROM) removed.
+Unused block "U/Font_8/SF4511_F" (ROM) removed.
+Unused block "U/Font_8/SF4514_SW0" (ROM) removed.
+Unused block "U/Font_8/SF45211_F" (ROM) removed.
+Unused block "U/Font_8/SF45211_G" (ROM) removed.
+Unused block "U/Font_8/SF45217_F" (ROM) removed.
+Unused block "U/Font_8/SF45217_G" (ROM) removed.
+Unused block "U/Font_8/SF45222" (ROM) removed.
+Unused block "U/Font_8/SF4524_SW1" (ROM) removed.
+Unused block "U/Font_8/SF4527" (ROM) removed.
+Unused block "U/Font_8/SF4528" (ROM) removed.
+Unused block "U/Font_8/SF6" (ROM) removed.
+Unused block "U/Font_8/SF74_SW0" (ROM) removed.
+Unused block "U/Font_8/SF74_SW1" (ROM) removed.
+Unused block "U/Font_8/SF815_SW0" (ROM) removed.
+Unused block "U/Font_8/SF943_F_INV_0" (BUF) removed.
+Unused block "U/Font_8/SF943_G" (ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int101" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int1111" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int18131" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181312_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181313"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181314"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181315"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181320_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181327_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181332"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181340"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int181344_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int281" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321310_SW0_G
+" (ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321319_SW1_S
+W0" (ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321321"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321323"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321324"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int321326"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int32134_F"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int32134_G"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int391" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int401" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4123_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4124" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int4126" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46131" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461315_G"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461316"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461320_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461326_F"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461326_G"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461329"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46133" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461338"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461339"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int461340"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46136" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int46139_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int541" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int561" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int571" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601311"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601315"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601319"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60132" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601323"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601327_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60133" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601330_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601333_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int60134" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601340_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601348"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601350"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601351"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int601366_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int701" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741312"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741323"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741325"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741327"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int741330"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int74135_G"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int74135_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int74137_F_INV_
+0" (BUF) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int74137_G"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int801" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881310_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881323_F"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881323_G"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int88133" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int881331_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int88135" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int88138" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int97131" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int971310"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int971311"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int971314_SW0"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int97132" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int97136_F"
+(ROM) removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int97138" (ROM)
+removed.
+Unused block
+"U/Font_8/U0/xst_options.dist_mem_inst/gen_rom.rom_inst/Mram_spo_int97139" (ROM)
+removed.
+Unused block "U/Font_8/XST_GND1" (ZERO) removed.
+Unused block "U/Font_8/XST_VCC1" (ONE) removed.
+Unused block "U7/_n0029_inv1" (ROM) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+FD 		M4/get_D_0
+   optimized to 0
+FD 		M4/get_D_1
+   optimized to 0
+LUT6 		M4/readn_glue_set
+   optimized to 1
+GND 		U2/XST_GND1
+VCC 		U2/XST_VCC1
+GND 		U3/XST_GND
+VCC 		U3/XST_VCC
+LUT6 		U5/MUX2_Blink/Mmux_o_3
+   optimized to 0
+LUT6 		U5/MUX2_Blink/Mmux_o_31
+   optimized to 0
+LUT6 		U5/MUX2_Blink/Mmux_o_32
+   optimized to 0
+LUT6 		U5/MUX2_Blink/Mmux_o_33
+   optimized to 0
+LUT6 		U5/MUX2_Blink/Mmux_o_34
+   optimized to 0
+LUT6 		U5/MUX2_Blink/Mmux_o_35
+   optimized to 0
+LUT6 		U5/MUX2_Blink/Mmux_o_36
+   optimized to 0
+LUT6 		U5/MUX2_Blink/Mmux_o_37
+   optimized to 0
+VCC 		U6/XST_VCC
+VCC 		U7/XST_VCC
+GND 		XST_GND
+VCC 		XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| BTN_x<0>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| BTN_x<1>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| BTN_x<2>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| BTN_x<3>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| BTN_x<4>                           | IOB              | OUTPUT    | LVCMOS18             |       | 12       | SLOW |              |          |          |
+| BTN_y<0>                           | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| BTN_y<1>                           | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| BTN_y<2>                           | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| BTN_y<3>                           | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| CR                                 | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| HSYNC                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| LED_PEN                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| RDY                                | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| RSTN                               | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| SEG_PEN                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| SW<0>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<1>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<2>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<3>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<4>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<5>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<6>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<7>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<8>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<9>                              | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<10>                             | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<11>                             | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<12>                             | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<13>                             | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<14>                             | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| SW<15>                             | IOB              | INPUT     | LVCMOS15             |       |          |      |              |          |          |
+| VGA_B<0>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| VGA_B<1>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| VGA_B<2>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| VGA_B<3>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| VGA_G<0>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| VGA_G<1>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| VGA_G<2>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| VGA_G<3>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| VGA_R<0>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| VGA_R<1>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| VGA_R<2>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| VGA_R<3>                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| VSYNC                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | FAST |              |          |          |
+| clk_100mhz                         | IOB              | INPUT     | LVCMOS18             |       |          |      |              |          |          |
+| led_clk                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led_clrn                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led_sout                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| readn                              | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| seg_clk                            | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| seg_clrn                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| seg_sout                           | IOB33            | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.
