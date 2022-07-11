@@ -13,3 +13,5 @@ Pipelined with hazard is in `lab-ppl-ha`.
 Single CPU for **SWORD** is in `cpu622`.
 
 Pipelined with hazard for **SWORD** is in `cpu625`.
+
+Final submitted program is in `cpu702`(finished in 11 Jul, 2022)
