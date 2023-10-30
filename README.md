@@ -10,6 +10,10 @@
 
 带有冒险的流水线代码在 `lab-ppl-ha/` 里。
 
+可在Windows环境下编译运行的LaTeX版实验报告在 `windows-latex` 里。
+
+可在macOS环境下编译运行的LaTeX版实验报告在 `mac-latex` 里。
+
 ---
 
 用于 **SWORD** 的单周期在 `cpu622/`；
@@ -29,6 +33,10 @@ Single cycle is in `lab-single`.
 Pipelined(without hazard resolution) is in `lab-pipeline`.(However, control hazards might be solved.)
 
 Pipelined with hazard is in `lab-ppl-ha`.
+
+The report that can be compiled in Windows is in `windows-latex`.
+
+The report that can be compiled in macOS is in `mac-latex`.
 
 ---
 
