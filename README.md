@@ -10,9 +10,11 @@
 
 带有冒险的流水线代码在 `lab-ppl-ha/` 里。
 
-可在Windows环境下编译运行的LaTeX版实验报告在 `windows-latex` 里。
+~~可在Windows环境下编译运行的LaTeX版实验报告在 `windows-latex` 里。~~
 
-可在macOS环境下编译运行的LaTeX版实验报告在 `mac-latex` 里。
+~~可在macOS环境下编译运行的LaTeX版实验报告在 `mac-latex` 里。~~
+
+本实验报告的LaTeX模板已移动至新仓库：[https://github.com/wjy-yy/WHUCS-LaTeX/](https://github.com/wjy-yy/WHUCS-LaTeX/)，同时不区分系统，欢迎测试并使用。
 
 ---
 
